@@ -240,7 +240,33 @@ body {
     justify-content: center;
     font-size: 4rem;
     color: rgba(255, 255, 255, 0.8);
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* Fallback for when image doesn't load */
+.profile-circle:not(:has(img)) {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.profile-circle:not(:has(img))::before {
+    content: '\f0ac'; /* Font Awesome network icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
 }
 
 /* Section Styles */
