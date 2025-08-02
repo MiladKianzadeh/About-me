@@ -3,7 +3,7 @@
 Welcome to my professional portfolio website showcasing my expertise in IT infrastructure, network administration, and software development.
 
 ## 🌐 Live Site
-Visit my portfolio at: [https://miladkian26.github.io/About-me/](https://miladkian26.github.io/About-me/)
+Visit my portfolio at: [https://MiladKianzadeh.github.io/About-me/](https://miladkian26.github.io/About-me/)
 
 ## 👨‍💻 About Me
 - **Education**: Master's in Electrical & Computer Engineering, University of Ottawa
