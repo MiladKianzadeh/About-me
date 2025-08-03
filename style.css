@@ -284,3 +284,84 @@ body {
     bottom: -10px;
     left: 50%;
     transform: translateX(-
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .hero-image {
+    margin-top: 2rem;
+  }
+
+  .about-content,
+  .projects-grid,
+  .skills-grid,
+  .contact-content,
+  .timeline {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .highlight-item,
+  .skill-category,
+  .timeline-item,
+  .project-card {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .profile-circle {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* Make images scale properly */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Improve readability on mobile */
+h1, h2, h3, h4, p {
+  word-wrap: break-word;
+}
+
+/* Ensure section spacing doesn't break layout */
+section {
+  padding: 60px 20px;
+  overflow-x: hidden;
+}
