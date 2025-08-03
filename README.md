@@ -1,84 +1,74 @@
-# Milad Kianzadeh - Professional Portfolio
+# Milad Kianzadeh – Professional Portfolio
 
-Welcome to my professional portfolio website showcasing my expertise in IT infrastructure, network administration, and software development.
+Welcome to my personal portfolio website where I present my background in IT infrastructure, help desk support, and software development.
 
-## 🌐 Live Site
-Visit my portfolio at: [https://miladkianzadeh.github.io/About-me/](https://miladkianzadeh.github.io/About-me/)
+## 🌐 Live Website
+View my live site here:  
+🔗 [https://miladkianzadeh.github.io/About-me/](https://miladkianzadeh.github.io/About-me/)
 
 ## 👨‍💻 About Me
-- **Education**: Master's in Electrical & Computer Engineering, University of Ottawa
-- **Experience**: 8+ years in IT infrastructure and software development
-- **Specializations**: Network infrastructure, system administration, full-stack development
-- **Location**: Ottawa, Ontario, Canada
+- 🎓 **Education**: Master’s in Electrical & Computer Engineering – University of Ottawa (2023–2025)
+- 💼 **Experience**: 8+ years in IT across ISP, engineering, and financial sectors
+- 🧑‍🔧 **Roles**:
+  - Help Desk Support at Iranian Reinsurance Company
+  - IT Specialist at Sarafraz and Sazehpad Engineering Firm
+  - Software Support & Full Stack Developer at Sabanet ISP
+- 📍 **Location**: Ottawa, Ontario, Canada
 
 ## 🛠️ Technical Skills
 
 ### Networking & Infrastructure
 - CCNA/CCNP Routing & Switching
-- LAN/WAN Configuration
-- Network Protocols & Wireless Setup
+- LAN/WAN configuration, wireless networks
 - Windows Server & Active Directory
+- Network protocols, hybrid environments
+
+### Systems Administration
+- VMware virtualization
+- Docker containerization
+- RAID, diagnostics, and HP enterprise servers
+- Infrastructure maintenance and support
 
 ### Software Development
-- C# & ASP.NET Development
-- Python Programming
-- SQL Server & Database Optimization
-- HTML/CSS Web Development
+- C# and ASP.NET (Full Stack)
+- SQL Server performance optimization
+- Python scripting
+- HTML/CSS for frontend layout
 
-### System Administration
-- VMware Virtualization
-- Docker Containerization
-- Server Configuration & RAID Setup
-- System Diagnostics & Troubleshooting
-
-## 🏆 Key Achievements
-- Supported web applications serving **10+ million users**
-- Managed enterprise infrastructure with **99%+ uptime**
-- **15+ professional certifications** including CCNA/CCNP, MCSA, CEH
-- 8 years of hands-on experience across ISP, engineering, and financial sectors
+## 🧩 Featured Projects
+- ✅ **ISP Web Platform** – Supported high-scale internal apps at Sabanet using ASP.NET and SQL Server
+- ✅ **Engineering Firm IT Management** – Maintained network and systems over 8 years at Sazehpad
+- ✅ **Enterprise Server Setup** – Deployed RAID and HP systems at Sarafraz
+- ✅ **IT Support for Finance** – Help Desk at Iranian Reinsurance Co. for critical financial systems
 
 ## 📜 Certifications
-- **Cisco**: CCNA/CCNP Routing & Switching
-- **Microsoft**: MCSA 2012 & 2022
-- **Security**: Certified Ethical Hacker (CEH)
-- **Programming**: Python (Harvard University), SQL, .NET Framework
-- **Cloud & Tools**: Docker, VMware
+- 🏅 **Cisco** – CCNA & CCNP Routing & Switching
+- 🏅 **Microsoft** – MCSA 2012 & 2022
+- 🏅 **Security** – CEH (Certified Ethical Hacker)
+- 🏅 **Programming** – Python (Harvard), SQL, .NET
+- 🏅 **Cloud/Tools** – Docker, VMware, MikroTik (MTCNA)
 
-## 📞 Contact Information
-- **Email**: [MiladKianzadeh@cmail.carleton.ca](mailto:MiladKianzadeh@cmail.carleton.ca)
-- **Phone**: (613) 327-2501
-- **LinkedIn**: [linkedin.com/in/miladkianzadeh](https://linkedin.com/in/miladkianzadeh)
-- **Location**: Ottawa, ON, Canada
+## 📬 Contact Me
+- 📧 Email: [MiladKianzadeh@cmail.carleton.ca](mailto:MiladKianzadeh@cmail.carleton.ca)
+- 🌐 LinkedIn: [linkedin.com/in/miladkianzadeh](https://linkedin.com/in/miladkianzadeh)
+- 📍 Location: Ottawa, ON, Canada
 
-## 🚀 Current Status
-Currently completing Master's degree (2023-2025) and available for:
-- Part-time consulting opportunities
-- Full-time positions starting 2025
-- Collaboration on IT infrastructure projects
+## 🚀 Availability
+- Part-time consulting or freelance roles (2024–2025)
+- Open to full-time opportunities from 2025
+- Eager to collaborate on network infrastructure or software development projects
 
 ---
 
-## 💻 Website Technology Stack
-- **Frontend**: HTML5, CSS3, JavaScript
-- **Styling**: Custom CSS with modern design principles
+## 💻 Website Tech Stack
+- **Frontend**: HTML5, CSS3
+- **Styling**: Custom responsive CSS with Flexbox/Grid
+- **JavaScript**: Navigation toggle, smooth scroll, scroll animation
+- **Icons**: Font Awesome 6
 - **Hosting**: GitHub Pages
-- **Features**: Responsive design, smooth animations, mobile-friendly
+- **Features**:
+  - Mobile responsive design
+  - Section animations on scroll
+  - Active link highlighting and navigation
 
-## 📋 Project Structure
-```
-About-me/
-├── index.html          # Main portfolio page
-├── style.css           # Styling and animations
-├── README.md           # This file
-└── assets/            # Images and documents (if any)
-```
-
-## 🔧 Local Development
-To run this site locally:
-1. Clone the repository
-2. Open `index.html` in your web browser
-3. Or use a local server like Live Server in VS Code
-
----
-
-*Last updated: January 2025*
+## 📁 Project Structure
