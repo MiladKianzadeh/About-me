@@ -84,16 +84,7 @@ View my live site here:
 
 ## 💻 Website Tech Stack
 - **Frontend:** HTML5, CSS3  
-- **Styling:** Custom responsive CSS with Flexbox/Grid  
-- **JavaScript:** Navigation toggle, smooth scroll, scroll animation  
-- **Icons:** Font Awesome 6  
 - **Hosting:** GitHub Pages  
-
-**Features:**
-- Mobile-responsive design  
-- Section animations on scroll  
-- Smooth navigation and active-link highlighting  
-
 ---
 
 ## 📁 Project Structure
