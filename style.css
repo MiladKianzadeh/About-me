@@ -1021,6 +1021,11 @@ section {
   text-decoration: none;
   transition: all 0.2s;
 }
+.contact-content,
+.contact-content h3,
+.contact-content p {
+  color: white;
+}
 
 .social-links a:hover {
   background: var(--accent);
