@@ -3,296 +3,1085 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Milad Kianzadeh – IT Infrastructure, DevOps & Software Professional with experience in networking, system administration, Docker, and full-stack development."
-    />
-    <meta
-      name="keywords"
-      content="IT, DevOps, MLOps, networking, software development, Docker, Kubernetes, system administration, Ottawa, CCNA, ASP.NET, C#, SQL, Python"
-    />
+    <meta name="description" content="Milad Kianzadeh – IT Specialist | IT Analyst | Network & Systems Support Professional with 8+ years of experience in networking, system administration, DevOps, and full-stack development." />
+    <meta name="keywords" content="IT Specialist, IT Analyst, Network Support, Systems Support, CCNA, CCNP, MCSA, Windows Server, Active Directory, Docker, Kubernetes, ASP.NET, SQL Server, Ottawa" />
     <meta name="author" content="Milad Kianzadeh" />
-    <title>Milad Kianzadeh - IT Infrastructure & DevOps Professional</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
+    <title>Milad Kianzadeh – IT Specialist & Network Systems Support</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --navy: #0b1f3a;
+        --navy-mid: #142d52;
+        --accent: #2c7ef8;
+        --accent-light: #5a9dfb;
+        --gold: #e8a838;
+        --white: #f5f8ff;
+        --light-bg: #eef3fb;
+        --text: #1a2b45;
+        --muted: #5a6e87;
+        --card-bg: #ffffff;
+        --border: #d4e0f0;
+        --radius: 12px;
+        --shadow: 0 4px 24px rgba(11,31,58,0.10);
+        --shadow-lg: 0 12px 48px rgba(11,31,58,0.16);
+      }
+
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        font-family: 'DM Sans', sans-serif;
+        background: var(--white);
+        color: var(--text);
+        line-height: 1.65;
+        font-size: 16px;
+      }
+
+      /* ── NAV ── */
+      .navbar {
+        position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+        background: rgba(11,31,58,0.97);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+      }
+      .nav-container {
+        max-width: 1200px; margin: 0 auto;
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 0 2rem; height: 64px;
+      }
+      .nav-logo h2 {
+        font-family: 'DM Serif Display', serif;
+        color: var(--white); font-size: 1.2rem; font-weight: 400;
+        letter-spacing: 0.02em;
+      }
+      .nav-menu { display: flex; list-style: none; gap: 2rem; }
+      .nav-menu a {
+        color: rgba(245,248,255,0.75); text-decoration: none;
+        font-size: 0.88rem; font-weight: 500; letter-spacing: 0.04em;
+        text-transform: uppercase; transition: color 0.2s;
+      }
+      .nav-menu a:hover, .nav-menu a.active { color: var(--accent-light); }
+      .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+      .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
+
+      /* ── HERO ── */
+      .hero {
+        min-height: 100vh; display: flex; align-items: center;
+        background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #1a3a6b 100%);
+        position: relative; overflow: hidden; padding-top: 64px;
+      }
+      .hero::before {
+        content: ''; position: absolute; inset: 0;
+        background: radial-gradient(ellipse 70% 60% at 70% 50%, rgba(44,126,248,0.18) 0%, transparent 70%);
+      }
+      .hero-grid-bg {
+        position: absolute; inset: 0; opacity: 0.04;
+        background-image: linear-gradient(var(--white) 1px, transparent 1px),
+          linear-gradient(90deg, var(--white) 1px, transparent 1px);
+        background-size: 48px 48px;
+      }
+      .hero-container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; position: relative; z-index: 1; width: 100%; }
+      .hero-content { display: grid; grid-template-columns: 1fr auto; gap: 4rem; align-items: center; }
+      .hero-eyebrow {
+        display: inline-flex; align-items: center; gap: 0.5rem;
+        background: rgba(44,126,248,0.18); border: 1px solid rgba(44,126,248,0.35);
+        color: var(--accent-light); font-size: 0.78rem; font-weight: 600;
+        letter-spacing: 0.1em; text-transform: uppercase;
+        padding: 0.4rem 1rem; border-radius: 100px; margin-bottom: 1.25rem;
+      }
+      .hero-text h1 {
+        font-family: 'DM Serif Display', serif;
+        color: var(--white); font-size: clamp(2.2rem, 4vw, 3.4rem);
+        line-height: 1.15; margin-bottom: 0.5rem; font-weight: 400;
+      }
+      .hero-roles {
+        display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.2rem 0;
+      }
+      .role-badge {
+        background: rgba(232,168,56,0.15); border: 1px solid rgba(232,168,56,0.4);
+        color: var(--gold); font-size: 0.8rem; font-weight: 600;
+        padding: 0.35rem 0.85rem; border-radius: 6px; letter-spacing: 0.02em;
+      }
+      .hero-subtitle {
+        color: rgba(245,248,255,0.65); font-size: 0.95rem; margin-bottom: 1.5rem;
+      }
+      .hero-description {
+        color: rgba(245,248,255,0.78); font-size: 1rem; max-width: 580px;
+        line-height: 1.75; margin-bottom: 2rem;
+      }
+      .hero-stats { display: flex; gap: 2.5rem; margin-bottom: 2.5rem; }
+      .stat-item { display: flex; flex-direction: column; }
+      .stat-number { font-family: 'DM Serif Display', serif; font-size: 2.4rem; color: var(--white); line-height: 1; }
+      .stat-label { font-size: 0.8rem; color: rgba(245,248,255,0.55); margin-top: 0.2rem; text-transform: uppercase; letter-spacing: 0.06em; }
+      .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+      .btn {
+        display: inline-flex; align-items: center; gap: 0.5rem;
+        padding: 0.75rem 1.75rem; border-radius: 8px;
+        font-size: 0.9rem; font-weight: 600; text-decoration: none;
+        transition: all 0.25s; border: none; cursor: pointer;
+      }
+      .btn-primary { background: var(--accent); color: #fff; }
+      .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(44,126,248,0.35); }
+      .btn-secondary { background: transparent; color: var(--white); border: 1px solid rgba(245,248,255,0.3); }
+      .btn-secondary:hover { border-color: var(--white); background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+      .profile-circle {
+        width: 220px; height: 220px; border-radius: 50%;
+        border: 3px solid rgba(44,126,248,0.5);
+        overflow: hidden; background: var(--navy-mid);
+        display: flex; align-items: center; justify-content: center;
+        box-shadow: 0 0 0 8px rgba(44,126,248,0.1), var(--shadow-lg);
+      }
+      .profile-circle i { font-size: 5rem; color: rgba(245,248,255,0.25); }
+
+      /* ── SECTIONS SHARED ── */
+      section { padding: 5rem 0; }
+      .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+      .section-title {
+        font-family: 'DM Serif Display', serif;
+        font-size: clamp(1.8rem, 3vw, 2.6rem);
+        color: var(--navy); font-weight: 400;
+        margin-bottom: 0.5rem;
+      }
+      .section-subtitle {
+        color: var(--muted); font-size: 1rem; margin-bottom: 3rem;
+        max-width: 600px;
+      }
+      .section-tag {
+        display: inline-block; background: var(--light-bg);
+        color: var(--accent); font-size: 0.75rem; font-weight: 700;
+        letter-spacing: 0.1em; text-transform: uppercase;
+        padding: 0.3rem 0.8rem; border-radius: 100px;
+        margin-bottom: 0.75rem;
+      }
+
+      /* ── ABOUT ── */
+      .about { background: var(--white); }
+      .about-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+      .about-card {
+        background: var(--card-bg); border: 1px solid var(--border);
+        border-radius: var(--radius); padding: 1.75rem;
+        transition: transform 0.25s, box-shadow 0.25s;
+      }
+      .about-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+      .about-card-icon {
+        width: 48px; height: 48px; border-radius: 10px;
+        background: var(--light-bg); display: flex; align-items: center; justify-content: center;
+        margin-bottom: 1rem;
+      }
+      .about-card-icon i { font-size: 1.3rem; color: var(--accent); }
+      .about-card h3 { font-size: 1rem; font-weight: 600; color: var(--navy); margin-bottom: 0.6rem; }
+      .about-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+      .about-lead {
+        background: var(--light-bg); border-left: 4px solid var(--accent);
+        padding: 1.5rem 1.75rem; border-radius: 0 var(--radius) var(--radius) 0;
+        font-size: 1.02rem; color: var(--text); line-height: 1.8;
+        margin-bottom: 2rem;
+      }
+
+      /* ── TARGET ROLES ── */
+      .target-roles { background: var(--navy); padding: 3rem 0; }
+      .target-roles-inner { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+      .target-roles-label { color: rgba(245,248,255,0.5); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap; }
+      .target-roles-list { display: flex; gap: 1rem; flex-wrap: wrap; }
+      .target-role-pill {
+        background: rgba(44,126,248,0.2); border: 1px solid rgba(44,126,248,0.4);
+        color: var(--accent-light); font-size: 0.9rem; font-weight: 500;
+        padding: 0.55rem 1.2rem; border-radius: 100px;
+        display: flex; align-items: center; gap: 0.5rem;
+      }
+
+      /* ── SKILLS ── */
+      .skills { background: var(--light-bg); }
+      .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+      .skill-category {
+        background: var(--card-bg); border: 1px solid var(--border);
+        border-radius: var(--radius); padding: 1.75rem;
+        transition: transform 0.25s, box-shadow 0.25s;
+      }
+      .skill-category:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+      .skill-category h3 {
+        display: flex; align-items: center; gap: 0.6rem;
+        font-size: 0.95rem; font-weight: 700; color: var(--navy);
+        margin-bottom: 1.25rem; text-transform: uppercase; letter-spacing: 0.05em;
+      }
+      .skill-category h3 i { color: var(--accent); font-size: 1rem; }
+      .skill-list { display: flex; flex-direction: column; gap: 0.6rem; }
+      .skill-item {
+        display: flex; justify-content: space-between; align-items: center;
+        padding: 0.55rem 0.75rem; border-radius: 6px;
+        background: var(--light-bg); font-size: 0.88rem;
+      }
+      .skill-name { color: var(--text); font-weight: 500; }
+      .skill-level {
+        font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+        padding: 0.2rem 0.6rem; border-radius: 100px;
+      }
+      .skill-level.expert { background: rgba(44,126,248,0.12); color: var(--accent); }
+      .skill-level.advanced { background: rgba(16,185,129,0.12); color: #0d9669; }
+      .skill-level.intermediate { background: rgba(232,168,56,0.12); color: #b57d1a; }
+
+      /* ── CERTIFICATIONS ── */
+      .certifications { background: var(--white); }
+      .cert-filter { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2rem; }
+      .cert-filter-btn {
+        padding: 0.45rem 1rem; border-radius: 100px; font-size: 0.82rem; font-weight: 600;
+        cursor: pointer; border: 1px solid var(--border); background: var(--white);
+        color: var(--muted); transition: all 0.2s;
+      }
+      .cert-filter-btn.active, .cert-filter-btn:hover {
+        background: var(--accent); color: #fff; border-color: var(--accent);
+      }
+      .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+      .cert-card {
+        background: var(--card-bg); border: 1px solid var(--border);
+        border-radius: var(--radius); padding: 1.25rem 1.4rem;
+        display: flex; gap: 1rem; align-items: flex-start;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .cert-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+      .cert-icon {
+        width: 36px; height: 36px; border-radius: 8px;
+        display: flex; align-items: center; justify-content: center;
+        flex-shrink: 0; margin-top: 0.1rem;
+      }
+      .cert-icon i { font-size: 0.95rem; }
+      .cert-icon.networking { background: rgba(44,126,248,0.1); }
+      .cert-icon.networking i { color: var(--accent); }
+      .cert-icon.os { background: rgba(16,185,129,0.1); }
+      .cert-icon.os i { color: #0d9669; }
+      .cert-icon.devops { background: rgba(139,92,246,0.1); }
+      .cert-icon.devops i { color: #7c3aed; }
+      .cert-icon.security { background: rgba(239,68,68,0.1); }
+      .cert-icon.security i { color: #dc2626; }
+      .cert-icon.dev { background: rgba(232,168,56,0.1); }
+      .cert-icon.dev i { color: #b57d1a; }
+      .cert-icon.ml { background: rgba(236,72,153,0.1); }
+      .cert-icon.ml i { color: #be185d; }
+      .cert-card-body { flex: 1; min-width: 0; }
+      .cert-title { font-size: 0.88rem; font-weight: 600; color: var(--navy); line-height: 1.35; margin-bottom: 0.2rem; }
+      .cert-issuer { font-size: 0.78rem; color: var(--muted); }
+      .cert-badge {
+        font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+        padding: 0.18rem 0.55rem; border-radius: 100px; margin-top: 0.35rem;
+        display: inline-block; letter-spacing: 0.05em;
+      }
+      .cert-badge.official { background: rgba(44,126,248,0.1); color: var(--accent); }
+      .cert-badge.completed { background: rgba(16,185,129,0.1); color: #0d9669; }
+      .cert-card[data-category] { transition: opacity 0.3s, transform 0.3s; }
+      .cert-card.hidden { display: none; }
+
+      /* ── PROJECTS ── */
+      .projects { background: var(--light-bg); }
+      .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+      .project-card {
+        background: var(--card-bg); border: 1px solid var(--border);
+        border-radius: var(--radius); padding: 2rem;
+        transition: transform 0.25s, box-shadow 0.25s;
+      }
+      .project-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+      .project-header { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.25rem; }
+      .project-header-icon {
+        width: 48px; height: 48px; background: var(--light-bg);
+        border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      }
+      .project-header-icon i { font-size: 1.3rem; color: var(--accent); }
+      .project-header h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.2rem; }
+      .project-meta { font-size: 0.82rem; color: var(--muted); }
+      .project-content p { font-size: 0.9rem; color: var(--text); line-height: 1.7; margin-bottom: 1rem; }
+      .project-content ul { list-style: none; padding: 0; margin-bottom: 1rem; }
+      .project-content ul li {
+        font-size: 0.88rem; color: var(--text); padding: 0.35rem 0;
+        padding-left: 1.2rem; position: relative;
+      }
+      .project-content ul li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: 0.85rem; }
+      .tech-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+      .tech-tag {
+        background: var(--light-bg); color: var(--muted);
+        font-size: 0.75rem; font-weight: 600; padding: 0.28rem 0.65rem;
+        border-radius: 6px; border: 1px solid var(--border);
+      }
+
+      /* ── EXPERIENCE ── */
+      .experience { background: var(--white); }
+      .timeline { position: relative; padding-left: 2rem; margin-top: 2rem; }
+      .timeline::before {
+        content: ''; position: absolute; left: 6px; top: 0; bottom: 0;
+        width: 2px; background: var(--border);
+      }
+      .timeline-item { position: relative; margin-bottom: 2.5rem; }
+      .timeline-item::before {
+        content: ''; position: absolute; left: -2rem; top: 6px;
+        width: 14px; height: 14px; border-radius: 50%;
+        background: var(--accent); border: 3px solid var(--white);
+        box-shadow: 0 0 0 2px var(--accent);
+      }
+      .timeline-card {
+        background: var(--card-bg); border: 1px solid var(--border);
+        border-radius: var(--radius); padding: 1.75rem;
+      }
+      .timeline-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; }
+      .timeline-title { font-size: 1.05rem; font-weight: 700; color: var(--navy); }
+      .timeline-company { font-size: 0.9rem; color: var(--accent); font-weight: 500; margin-top: 0.1rem; }
+      .timeline-period {
+        font-size: 0.8rem; color: var(--muted); background: var(--light-bg);
+        padding: 0.3rem 0.75rem; border-radius: 100px; white-space: nowrap;
+      }
+      .timeline-card ul { list-style: none; padding: 0; margin-top: 0.75rem; }
+      .timeline-card ul li {
+        font-size: 0.88rem; color: var(--text); padding: 0.3rem 0;
+        padding-left: 1.2rem; position: relative; line-height: 1.6;
+      }
+      .timeline-card ul li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); }
+
+      /* ── EDUCATION ── */
+      .education { background: var(--light-bg); }
+      .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+      .edu-card {
+        background: var(--card-bg); border: 1px solid var(--border);
+        border-radius: var(--radius); padding: 1.75rem;
+      }
+      .edu-degree { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.25rem; }
+      .edu-school { font-size: 0.9rem; color: var(--accent); font-weight: 500; }
+      .edu-year { font-size: 0.82rem; color: var(--muted); margin-top: 0.4rem; }
+
+      /* ── CONTACT ── */
+      .contact { background: var(--navy); }
+      .contact .section-title { color: var(--white); }
+      .contact .section-subtitle { color: rgba(245,248,255,0.6); }
+      .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2.5rem; }
+      .contact-item {
+        display: flex; align-items: flex-start; gap: 1rem;
+        padding: 1.25rem; border-radius: var(--radius);
+        background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+        margin-bottom: 1rem;
+      }
+      .contact-item i { font-size: 1.1rem; color: var(--accent-light); margin-top: 0.15rem; }
+      .contact-item h4 { font-size: 0.78rem; font-weight: 700; color: rgba(245,248,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.2rem; }
+      .contact-item p, .contact-item a { font-size: 0.9rem; color: var(--white); text-decoration: none; }
+      .contact-item a:hover { color: var(--accent-light); }
+      .availability-card {
+        background: rgba(44,126,248,0.15); border: 1px solid rgba(44,126,248,0.35);
+        border-radius: var(--radius); padding: 1.5rem; margin-top: 1.5rem;
+      }
+      .availability-card h4 { color: var(--accent-light); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+      .availability-card p { color: rgba(245,248,255,0.85); font-size: 0.9rem; }
+
+      /* ── FOOTER ── */
+      .footer {
+        background: #060f1e; border-top: 1px solid rgba(255,255,255,0.06);
+        padding: 2rem; text-align: center;
+      }
+      .footer p { color: rgba(245,248,255,0.35); font-size: 0.85rem; }
+      .social-links { display: flex; justify-content: center; gap: 1rem; margin-top: 0.75rem; }
+      .social-links a {
+        width: 38px; height: 38px; border-radius: 8px;
+        background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+        display: flex; align-items: center; justify-content: center;
+        color: rgba(245,248,255,0.5); text-decoration: none; transition: all 0.2s;
+      }
+      .social-links a:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 900px) {
+        .hero-content { grid-template-columns: 1fr; }
+        .profile-circle { display: none; }
+        .about-grid, .skills-grid, .projects-grid, .edu-grid, .contact-grid { grid-template-columns: 1fr; }
+        .cert-grid { grid-template-columns: repeat(2, 1fr); }
+        .nav-menu { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--navy); padding: 1rem 2rem 2rem; gap: 1rem; }
+        .nav-menu.active { display: flex; }
+        .hamburger { display: flex; }
+      }
+      @media (max-width: 600px) {
+        .cert-grid { grid-template-columns: 1fr; }
+        .hero-stats { gap: 1.5rem; }
+      }
+    </style>
   </head>
   <body>
+
     <!-- Navigation -->
     <nav class="navbar">
       <div class="nav-container">
-        <div class="nav-logo">
-          <h2>Milad Kianzadeh</h2>
-        </div>
+        <div class="nav-logo"><h2>Milad Kianzadeh</h2></div>
         <ul class="nav-menu">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certifications">Certifications</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="hamburger">
-          <span></span><span></span><span></span>
-        </div>
+        <div class="hamburger"><span></span><span></span><span></span></div>
       </div>
     </nav>
-<!-- Hero Section -->
-<section id="home" class="hero">
-  <div class="hero-container">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>IT Infrastructure & DevOps Engineer</h1>
-        <p class="hero-subtitle">
-          M.Eng in Electrical & Computer Engineering | 8+ Years of Professional Experience
-        </p>
-        <p class="hero-description">
-          IT Infrastructure and Software professional with a Master’s degree in Electrical and Computer Engineering 
-          from the University of Ottawa and a Bachelor’s degree in Computer Engineering (Software) 
-          from Islamic Azad University. Over 8 years of experience delivering end-to-end IT solutions 
-          across infrastructure management, networking, and full-stack software development. 
-          Skilled in DevOps practices, automation, and cloud-based deployment strategies. 
-          Dedicated to building secure, scalable, and high-performance systems that drive organizational efficiency 
-          and innovation.
-        </p>
 
-        <div class="hero-stats">
-          <div class="stat-item">
-            <span class="stat-number">8+</span>
-            <span class="stat-label">Years Experience</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">20+</span>
-            <span class="stat-label">Certifications</span>
-          </div>
-        </div>
-
-        <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-secondary">Contact Me</a>
-        </div>
-      </div>
-
-      <div class="hero-image">
-        <div class="profile-circle">
-          <img src="assets/profile.jpg" alt="Milad Kianzadeh" class="profile-img" />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- About Section -->
-<section id="about" class="about">
-  <div class="container">
-    <h2 class="section-title">Professional Summary</h2>
-    <div class="about-content">
-      <div class="about-main">
-        <p class="about-lead">
-          Master of Engineering graduate in Electrical & Computer Engineering (University of Ottawa) 
-          with a Bachelor's in Computer Engineering – Software (Islamic Azad University). 
-          Over 8 years of progressive experience in IT infrastructure, software development, and network administration. 
-          Skilled in modern DevOps tools, automation, and system optimization with a strong foundation in cloud technologies 
-          and data-driven engineering. Passionate about continuous learning, innovative problem-solving, and 
-          creating robust, future-ready digital environments.
-        </p>
-
-        <div class="about-highlights">
-          <div class="highlight-item">
-            <i class="fas fa-network-wired"></i>
-            <div>
-              <h3>Networking & Infrastructure</h3>
-              <p>
-                Designed and maintained secure, high-availability enterprise networks. Experienced in Cisco routing, switching,
-                and wireless configurations to ensure stability and scalability.
-              </p>
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="hero-grid-bg"></div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="hero-eyebrow"><i class="fas fa-map-marker-alt"></i> Ottawa, Ontario · Available Now</div>
+            <h1>IT Specialist &<br>Network Systems Support</h1>
+            <div class="hero-roles">
+              <span class="role-badge"><i class="fas fa-briefcase"></i> IT Specialist</span>
+              <span class="role-badge"><i class="fas fa-chart-bar"></i> IT Analyst</span>
+              <span class="role-badge"><i class="fas fa-network-wired"></i> Network & Systems Support</span>
             </div>
-          </div>
-
-          <div class="highlight-item">
-            <i class="fas fa-server"></i>
-            <div>
-              <h3>System Administration & Virtualization</h3>
-              <p>
-                Managed Windows Server, VMware, and hybrid infrastructures for large-scale engineering and ISP operations. 
-                Implemented automation and monitoring for reliability and efficiency.
-              </p>
-            </div>
-          </div>
-
-          <div class="highlight-item">
-            <i class="fas fa-code"></i>
-            <div>
-              <h3>Software Development & DevOps</h3>
-              <p>
-                Full-stack developer experienced in ASP.NET, C#, SQL, and Python. 
-                Automates deployment pipelines using Docker, Kubernetes, and CI/CD methodologies 
-                to bridge software and infrastructure workflows.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-      <div class="container">
-        <h2 class="section-title">Key Projects & Achievements</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-header">
-              <i class="fas fa-globe"></i>
-              <h3>Large-Scale Web Application Platform</h3>
-            </div>
-            <div class="project-content">
-              <p><strong>Role:</strong> Software Support & Full Stack Developer</p>
-              <p><strong>Company:</strong> Sabanet ISP, Tehran</p>
-              <p><strong>Impact:</strong> Supported internal applications used across departments.</p>
-              <div class="project-details">
-                <h4>Highlights:</h4>
-                <ul>
-                  <li>Developed ASP.NET applications with SQL Server backend.</li>
-                  <li>Enhanced performance via database optimization.</li>
-                  <li>Maintained application reliability and network connectivity.</li>
-                </ul>
+            <p class="hero-subtitle">M.Eng in Electrical & Computer Engineering · 8+ Years of Professional Experience</p>
+            <p class="hero-description">
+              IT professional with a Master's degree from the University of Ottawa and a strong foundation in
+              networking, systems administration, and infrastructure support. Holder of 20+ professional
+              certifications including CCNA, CCNP, MCSA, Network+, and CEH — committed to keeping
+              systems secure, stable, and performing at their best.
+            </p>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number">8+</span>
+                <span class="stat-label">Years Experience</span>
               </div>
-              <div class="project-tech">
-                <span class="tech-tag">ASP.NET</span>
-                <span class="tech-tag">C#</span>
-                <span class="tech-tag">SQL Server</span>
-                <span class="tech-tag">Optimization</span>
+              <div class="stat-item">
+                <span class="stat-number">20+</span>
+                <span class="stat-label">Certifications</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">36+</span>
+                <span class="stat-label">Courses Completed</span>
               </div>
             </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-header">
-              <i class="fas fa-server"></i>
-              <h3>Enterprise Infrastructure Management</h3>
+            <div class="hero-buttons">
+              <a href="#certifications" class="btn btn-primary"><i class="fas fa-certificate"></i> View Certifications</a>
+              <a href="#contact" class="btn btn-secondary"><i class="fas fa-envelope"></i> Contact Me</a>
             </div>
-            <div class="project-content">
-              <p><strong>Role:</strong> IT Specialist</p>
-              <p><strong>Company:</strong> Sazehpad Engineering Firm</p>
-              <ul>
-                <li>Managed hybrid infrastructure across multiple departments.</li>
-                <li>Ensured network uptime and data security.</li>
-                <li>Supported team operations with IT services and automation.</li>
-              </ul>
-              <div class="project-tech">
-                <span class="tech-tag">Windows Server</span>
-                <span class="tech-tag">Network Management</span>
-              </div>
+          </div>
+          <div class="hero-image">
+            <div class="profile-circle">
+              <i class="fas fa-user"></i>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Target Roles Banner -->
+    <div class="target-roles">
+      <div class="container">
+        <div class="target-roles-inner">
+          <span class="target-roles-label">Seeking roles in</span>
+          <div class="target-roles-list">
+            <span class="target-role-pill"><i class="fas fa-desktop"></i> IT Specialist</span>
+            <span class="target-role-pill"><i class="fas fa-search"></i> IT Analyst</span>
+            <span class="target-role-pill"><i class="fas fa-network-wired"></i> Network Support</span>
+            <span class="target-role-pill"><i class="fas fa-server"></i> Systems Support</span>
+            <span class="target-role-pill"><i class="fas fa-tools"></i> IT Help Desk / L2</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About -->
+    <section id="about" class="about">
+      <div class="container">
+        <span class="section-tag">Professional Summary</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="about-lead">
+          Master of Engineering graduate in Electrical & Computer Engineering (University of Ottawa) with a Bachelor's
+          in Computer Engineering – Software (Islamic Azad University). Over 8 years of progressive experience in
+          IT infrastructure, network administration, and system support. Skilled in diagnosing and resolving complex
+          network and hardware issues, managing Windows Server environments, and automating routine IT tasks.
+          Passionate about continuous learning — completing 36+ structured courses and 20+ certifications to stay at
+          the forefront of IT technology.
+        </div>
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="about-card-icon"><i class="fas fa-network-wired"></i></div>
+            <h3>Networking & Infrastructure</h3>
+            <p>Designed and maintained enterprise networks using Cisco and MikroTik equipment. Expert in routing, switching, VLANs, WAN/LAN, and wireless configuration. Holds CCNA, CCNP, MTCNA, and Network+ certifications.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon"><i class="fas fa-server"></i></div>
+            <h3>Systems Administration</h3>
+            <p>Administered Windows Server 2012/2022, Active Directory, DNS, DHCP, and VMware environments. Implemented group policies, user access controls, and automated monitoring for reliability and compliance.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon"><i class="fas fa-headset"></i></div>
+            <h3>IT Support & Analysis</h3>
+            <p>Provided end-to-end IT support across ISP and engineering firm environments. Triaged hardware/software issues, maintained documentation, managed help desk workflows, and supported cross-functional teams.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
     <section id="skills" class="skills">
       <div class="container">
-        <h2 class="section-title">Technical Expertise</h2>
-
+        <span class="section-tag">Technical Expertise</span>
+        <h2 class="section-title">Core Skills</h2>
+        <p class="section-subtitle">Competencies most relevant to IT Specialist, IT Analyst, and Network & Systems Support roles.</p>
         <div class="skills-grid">
-          <!-- Networking -->
+
           <div class="skill-category">
             <h3><i class="fas fa-network-wired"></i> Networking & Infrastructure</h3>
             <div class="skill-list">
-              <div class="skill-item"><span class="skill-name">CCNA/CCNP Routing & Switching</span><span class="skill-level">Expert</span></div>
-              <div class="skill-item"><span class="skill-name">Network+ & MTCNA</span><span class="skill-level">Advanced</span></div>
-              <div class="skill-item"><span class="skill-name">LAN/WAN & Wireless Configuration</span><span class="skill-level">Advanced</span></div>
+              <div class="skill-item"><span class="skill-name">CCNA / CCNP Routing & Switching</span><span class="skill-level expert">Expert</span></div>
+              <div class="skill-item"><span class="skill-name">CompTIA Network+ / MTCNA</span><span class="skill-level expert">Expert</span></div>
+              <div class="skill-item"><span class="skill-name">LAN / WAN / VLAN Configuration</span><span class="skill-level advanced">Advanced</span></div>
+              <div class="skill-item"><span class="skill-name">Wireless Network Setup & Troubleshooting</span><span class="skill-level advanced">Advanced</span></div>
+              <div class="skill-item"><span class="skill-name">TCP/IP, DNS, DHCP, Subnetting</span><span class="skill-level expert">Expert</span></div>
+              <div class="skill-item"><span class="skill-name">Network Monitoring & Diagnostics</span><span class="skill-level advanced">Advanced</span></div>
             </div>
           </div>
 
           <div class="skill-category">
             <h3><i class="fas fa-server"></i> Systems Administration</h3>
             <div class="skill-list">
-              <div class="skill-item"><span class="skill-name">Windows Server (2012 / 2022) & Active Directory</span><span class="skill-level">Expert</span></div>
-              <div class="skill-item"><span class="skill-name">VMware Virtualization</span><span class="skill-level">Advanced</span></div>
-              <div class="skill-item"><span class="skill-name">Docker & Kubernetes</span><span class="skill-level">Advanced</span></div>
+              <div class="skill-item"><span class="skill-name">Windows Server 2012 / 2022 (MCSA)</span><span class="skill-level expert">Expert</span></div>
+              <div class="skill-item"><span class="skill-name">Active Directory, DNS, DHCP, GPO</span><span class="skill-level expert">Expert</span></div>
+              <div class="skill-item"><span class="skill-name">VMware Virtualization</span><span class="skill-level advanced">Advanced</span></div>
+              <div class="skill-item"><span class="skill-name">Docker & Kubernetes</span><span class="skill-level advanced">Advanced</span></div>
+              <div class="skill-item"><span class="skill-name">User Access & Security Management</span><span class="skill-level advanced">Advanced</span></div>
+              <div class="skill-item"><span class="skill-name">System Monitoring & Maintenance</span><span class="skill-level advanced">Advanced</span></div>
             </div>
           </div>
 
           <div class="skill-category">
-            <h3><i class="fas fa-code"></i> Software Development</h3>
+            <h3><i class="fas fa-headset"></i> IT Support & Helpdesk</h3>
             <div class="skill-list">
-              <div class="skill-item"><span class="skill-name">C# & ASP.NET Framework</span><span class="skill-level">Advanced</span></div>
-              <div class="skill-item"><span class="skill-name">SQL Server & Optimization</span><span class="skill-level">Advanced</span></div>
-              <div class="skill-item"><span class="skill-name">Python Programming</span><span class="skill-level">Intermediate</span></div>
-              <div class="skill-item"><span class="skill-name">HTML, CSS</span><span class="skill-level">Intermediate</span></div>
+              <div class="skill-item"><span class="skill-name">Help Desk Support (L1 / L2)</span><span class="skill-level advanced">Advanced</span></div>
+              <div class="skill-item"><span class="skill-name">Hardware & Software Troubleshooting</span><span class="skill-level advanced">Advanced</span></div>
+              <div class="skill-item"><span class="skill-name">Incident Triage & Resolution</span><span class="skill-level advanced">Advanced</span></div>
+              <div class="skill-item"><span class="skill-name">IT Documentation & Reporting</span><span class="skill-level advanced">Advanced</span></div>
+              <div class="skill-item"><span class="skill-name">End-User Training & Support</span><span class="skill-level intermediate">Intermediate</span></div>
             </div>
           </div>
 
           <div class="skill-category">
-            <h3><i class="fas fa-brain"></i> DevOps & Data Science</h3>
+            <h3><i class="fas fa-shield-alt"></i> Security & DevOps</h3>
             <div class="skill-list">
-              <div class="skill-item"><span class="skill-name">Git, GitHub & Workflow Management</span><span class="skill-level">Advanced</span></div>
-              <div class="skill-item"><span class="skill-name">Docker Compose & Orchestration</span><span class="skill-level">Advanced</span></div>
-              <div class="skill-item"><span class="skill-name">Machine Learning Foundations</span><span class="skill-level">Intermediate</span></div>
+              <div class="skill-item"><span class="skill-name">Certified Ethical Hacker (CEH)</span><span class="skill-level advanced">Advanced</span></div>
+              <div class="skill-item"><span class="skill-name">Network Security & Firewall Management</span><span class="skill-level advanced">Advanced</span></div>
+              <div class="skill-item"><span class="skill-name">Git / GitHub Version Control</span><span class="skill-level advanced">Advanced</span></div>
+              <div class="skill-item"><span class="skill-name">Docker Compose & Orchestration</span><span class="skill-level advanced">Advanced</span></div>
+              <div class="skill-item"><span class="skill-name">Python Scripting & Automation</span><span class="skill-level intermediate">Intermediate</span></div>
+              <div class="skill-item"><span class="skill-name">SQL Server & Database Support</span><span class="skill-level advanced">Advanced</span></div>
             </div>
           </div>
 
-          <div class="skill-category">
-            <h3><i class="fas fa-certificate"></i> Certifications</h3>
-            <div class="cert-highlights">
-              <div class="cert-item"><i class="fas fa-award"></i><div><strong>Cisco CCNA / CCNP</strong><span>RahinCo / Maktabkhooneh</span></div></div>
-              <div class="cert-item"><i class="fas fa-award"></i><div><strong>Microsoft MCSA (2012 / 2022)</strong><span>TIT / Maktabkhooneh</span></div></div>
-              <div class="cert-item"><i class="fas fa-award"></i><div><strong>CompTIA Network+</strong><span>Tehran Institute of Technology</span></div></div>
-              <div class="cert-item"><i class="fas fa-award"></i><div><strong>Certified Ethical Hacker (CEH)</strong><span>Maktabkhooneh (Jadi Mirmirani)</span></div></div>
-              <div class="cert-item"><i class="fas fa-award"></i><div><strong>CS50’s Python</strong><span>Harvard University (edX)</span></div></div>
-              <div class="cert-item"><i class="fas fa-award"></i><div><strong>Docker & Kubernetes Series</strong><span>LinkedIn Learning</span></div></div>
-              <div class="cert-item"><i class="fas fa-award"></i><div><strong>Machine Learning & AI Foundations</strong><span>Maktabkhooneh / Coursera</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="certifications">
+      <div class="container">
+        <span class="section-tag">Credentials</span>
+        <h2 class="section-title">Certifications & Courses</h2>
+        <p class="section-subtitle">36+ completed programs across networking, systems, security, DevOps, and software development.</p>
+
+        <div class="cert-filter">
+          <button class="cert-filter-btn active" data-filter="all">All (36+)</button>
+          <button class="cert-filter-btn" data-filter="networking">Networking (6)</button>
+          <button class="cert-filter-btn" data-filter="os">Systems / OS (4)</button>
+          <button class="cert-filter-btn" data-filter="versioncontrol">Version Control (5)</button>
+          <button class="cert-filter-btn" data-filter="devops">Containers & DevOps (5)</button>
+          <button class="cert-filter-btn" data-filter="dev">Development (8)</button>
+          <button class="cert-filter-btn" data-filter="security">Security (1)</button>
+          <button class="cert-filter-btn" data-filter="ml">ML / AI (3)</button>
+        </div>
+
+        <div class="cert-grid" id="certGrid">
+
+          <!-- Networking -->
+          <div class="cert-card" data-category="networking">
+            <div class="cert-icon networking"><i class="fas fa-network-wired"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">CompTIA Network+</div>
+              <div class="cert-issuer">Tehran Institute of Technology</div>
+              <span class="cert-badge official">Certified</span>
             </div>
+          </div>
+          <div class="cert-card" data-category="networking">
+            <div class="cert-icon networking"><i class="fas fa-headset"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">IT Help Desk for Beginners</div>
+              <div class="cert-issuer">LinkedIn Learning</div>
+              <span class="cert-badge completed">Completed</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="networking">
+            <div class="cert-icon networking"><i class="fas fa-sitemap"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">Networking Foundations: Networking Basics</div>
+              <div class="cert-issuer">LinkedIn Learning</div>
+              <span class="cert-badge completed">Completed</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="networking">
+            <div class="cert-icon networking"><i class="fas fa-project-diagram"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">Networking Foundations: IP Addressing</div>
+              <div class="cert-issuer">LinkedIn Learning</div>
+              <span class="cert-badge completed">Completed</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="networking">
+            <div class="cert-icon networking"><i class="fas fa-route"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">Cisco CCNA R&S</div>
+              <div class="cert-issuer">Tehran Institute of Technology · Maktabkhooneh</div>
+              <span class="cert-badge official">Certified</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="networking">
+            <div class="cert-icon networking"><i class="fas fa-broadcast-tower"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">Cisco CCNP R&S</div>
+              <div class="cert-issuer">RahinCo</div>
+              <span class="cert-badge official">Certified</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="networking">
+            <div class="cert-icon networking"><i class="fas fa-ethernet"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">MikroTik MTCNA</div>
+              <div class="cert-issuer">RahinCo</div>
+              <span class="cert-badge official">Certified</span>
+            </div>
+          </div>
+
+          <!-- OS / Systems -->
+          <div class="cert-card" data-category="os">
+            <div class="cert-icon os"><i class="fab fa-windows"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">MCSA Windows Server 2012</div>
+              <div class="cert-issuer">Tehran Institute of Technology</div>
+              <span class="cert-badge official">Certified</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="os">
+            <div class="cert-icon os"><i class="fab fa-windows"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">MCSA Windows Server 2022</div>
+              <div class="cert-issuer">Maktabkhooneh</div>
+              <span class="cert-badge completed">Completed</span>
+            </div>
+          </div>
+
+          <!-- Version Control -->
+          <div class="cert-card" data-category="versioncontrol">
+            <div class="cert-icon devops"><i class="fab fa-git-alt"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">Comprehensive Git and GitHub Training</div>
+              <div class="cert-issuer">Maktabkhooneh</div>
+              <span class="cert-badge official">Certified</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="versioncontrol">
+            <div class="cert-icon devops"><i class="fab fa-github"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">Learning Git and GitHub</div>
+              <div class="cert-issuer">LinkedIn Learning</div>
+              <span class="cert-badge completed">Completed</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="versioncontrol">
+            <div class="cert-icon devops"><i class="fab fa-git-alt"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">Git Essential Training (2023)</div>
+              <div class="cert-issuer">LinkedIn Learning</div>
+              <span class="cert-badge completed">Completed</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="versioncontrol">
+            <div class="cert-icon devops"><i class="fas fa-code-branch"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">Using Git with Visual Studio Code</div>
+              <div class="cert-issuer">LinkedIn Learning</div>
+              <span class="cert-badge completed">Completed</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="versioncontrol">
+            <div class="cert-icon devops"><i class="fas fa-project-diagram"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">Git Workflows</div>
+              <div class="cert-issuer">LinkedIn Learning</div>
+              <span class="cert-badge completed">Completed</span>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="cert-card" data-category="dev">
+            <div class="cert-icon dev"><i class="fas fa-database"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">SQL Fundamentals</div>
+              <div class="cert-issuer">Sololearn</div>
+              <span class="cert-badge official">Certified</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="dev">
+            <div class="cert-icon dev"><i class="fas fa-database"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">SQL Server 2012 Database Development</div>
+              <div class="cert-issuer">Tehran Institute of Technology</div>
+              <span class="cert-badge official">Certified</span>
+            </div>
+          </div>
+
+          <!-- Containers / DevOps -->
+          <div class="cert-card" data-category="devops">
+            <div class="cert-icon devops"><i class="fab fa-docker"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">Basic Docker Training</div>
+              <div class="cert-issuer">Maktabkhooneh</div>
+              <span class="cert-badge completed">Completed</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="devops">
+            <div class="cert-icon devops"><i class="fab fa-docker"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">Learning Docker</div>
+              <div class="cert-issuer">LinkedIn Learning</div>
+              <span class="cert-badge completed">Completed</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="devops">
+            <div class="cert-icon devops"><i class="fab fa-docker"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">Docker: Your First Project</div>
+              <div class="cert-issuer">LinkedIn Learning</div>
+              <span class="cert-badge completed">Completed</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="devops">
+            <div class="cert-icon devops"><i class="fas fa-layer-group"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">Learning Docker Compose</div>
+              <div class="cert-issuer">LinkedIn Learning</div>
+              <span class="cert-badge completed">Completed</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="devops">
+            <div class="cert-icon devops"><i class="fas fa-dharmachakra"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">Learning Kubernetes</div>
+              <div class="cert-issuer">LinkedIn Learning</div>
+              <span class="cert-badge completed">Completed</span>
+            </div>
+          </div>
+
+          <!-- Python -->
+          <div class="cert-card" data-category="dev">
+            <div class="cert-icon dev"><i class="fab fa-python"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">CS50's Introduction to Programming with Python</div>
+              <div class="cert-issuer">Harvard University (edX)</div>
+              <span class="cert-badge official">Certified</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="dev">
+            <div class="cert-icon dev"><i class="fab fa-python"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">Python Training (Basic → Advanced)</div>
+              <div class="cert-issuer">Maktabkhooneh</div>
+              <span class="cert-badge completed">3 Courses Completed</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="dev">
+            <div class="cert-icon dev"><i class="fab fa-python"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">Comprehensive Python Training</div>
+              <div class="cert-issuer">Maktabkhooneh</div>
+              <span class="cert-badge completed">Completed</span>
+            </div>
+          </div>
+
+          <!-- Security -->
+          <div class="cert-card" data-category="security">
+            <div class="cert-icon security"><i class="fas fa-user-shield"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">Certified Ethical Hacker (CEH)</div>
+              <div class="cert-issuer">Maktabkhooneh (Jadi Mirmirani)</div>
+              <span class="cert-badge official">Certified</span>
+            </div>
+          </div>
+
+          <!-- ML / AI -->
+          <div class="cert-card" data-category="ml">
+            <div class="cert-icon ml"><i class="fas fa-brain"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">Machine Learning Training with Python</div>
+              <div class="cert-issuer">Maktabkhooneh (Jadi Mirmirani)</div>
+              <span class="cert-badge completed">Completed</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="ml">
+            <div class="cert-icon ml"><i class="fas fa-chart-line"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">Data Analysis with Python</div>
+              <div class="cert-issuer">Coursera</div>
+              <span class="cert-badge completed">Completed</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="ml">
+            <div class="cert-icon ml"><i class="fas fa-robot"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">AI Python for Beginners (2025)</div>
+              <div class="cert-issuer">Coursera</div>
+              <span class="cert-badge completed">Completed</span>
+            </div>
+          </div>
+
+          <!-- Web Dev -->
+          <div class="cert-card" data-category="dev">
+            <div class="cert-icon dev"><i class="fab fa-html5"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">HTML & CSS Fundamentals</div>
+              <div class="cert-issuer">Sololearn</div>
+              <span class="cert-badge official">Certified</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="dev">
+            <div class="cert-icon dev"><i class="fas fa-code"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">.NET Framework Application Foundation I & II</div>
+              <div class="cert-issuer">Tehran Institute of Technology</div>
+              <span class="cert-badge official">Certified</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="dev">
+            <div class="cert-icon dev"><i class="fas fa-code"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">Introduction to Programming .NET</div>
+              <div class="cert-issuer">Tehran Institute of Technology</div>
+              <span class="cert-badge official">Certified</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <span class="section-tag">Key Projects</span>
+        <h2 class="section-title">Projects & Achievements</h2>
+        <div class="projects-grid">
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-header-icon"><i class="fas fa-globe"></i></div>
+              <div>
+                <h3>Large-Scale Web Application Platform</h3>
+                <div class="project-meta">Software Support & Full Stack Developer · Sabanet ISP, Tehran</div>
+              </div>
+            </div>
+            <div class="project-content">
+              <p>Developed and maintained internal business applications used across departments at a major ISP, supporting day-to-day operations and network connectivity.</p>
+              <ul>
+                <li>Developed ASP.NET applications with SQL Server backend</li>
+                <li>Enhanced performance via database query optimization</li>
+                <li>Maintained application reliability and network integration</li>
+                <li>Provided internal technical support and troubleshooting</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag">ASP.NET</span><span class="tech-tag">C#</span>
+                <span class="tech-tag">SQL Server</span><span class="tech-tag">IIS</span>
+                <span class="tech-tag">Network Integration</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-header-icon"><i class="fas fa-building"></i></div>
+              <div>
+                <h3>Enterprise Infrastructure Management</h3>
+                <div class="project-meta">IT Specialist · Sazehpad Engineering Firm</div>
+              </div>
+            </div>
+            <div class="project-content">
+              <p>Managed end-to-end IT infrastructure for a multi-department engineering firm, ensuring maximum uptime, data security, and operational continuity.</p>
+              <ul>
+                <li>Managed Windows Server, Active Directory, and GPO configurations</li>
+                <li>Ensured network uptime and enforced data security policies</li>
+                <li>Supported staff with IT services, hardware, and automation</li>
+                <li>Maintained hybrid server and virtualization environment</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag">Windows Server</span><span class="tech-tag">Active Directory</span>
+                <span class="tech-tag">VMware</span><span class="tech-tag">Network Management</span>
+                <span class="tech-tag">IT Support</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-header-icon"><i class="fas fa-docker"></i></div>
+              <div>
+                <h3>Containerized DevOps Pipeline</h3>
+                <div class="project-meta">Personal Project · DevOps & Automation</div>
+              </div>
+            </div>
+            <div class="project-content">
+              <p>Designed and deployed containerized application stacks using Docker and Kubernetes, implementing CI/CD workflows to automate deployment and reduce manual overhead.</p>
+              <ul>
+                <li>Built multi-container environments with Docker Compose</li>
+                <li>Orchestrated deployments and scaling with Kubernetes</li>
+                <li>Automated Git-based deployment pipelines</li>
+                <li>Documented infrastructure configurations for team use</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag">Docker</span><span class="tech-tag">Kubernetes</span>
+                <span class="tech-tag">Docker Compose</span><span class="tech-tag">Git</span><span class="tech-tag">CI/CD</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-header-icon"><i class="fas fa-shield-alt"></i></div>
+              <div>
+                <h3>Network Security Audit & Hardening</h3>
+                <div class="project-meta">Security Assessment · CEH-Informed Practice</div>
+              </div>
+            </div>
+            <div class="project-content">
+              <p>Applied ethical hacking and network security principles to assess and harden infrastructure, identifying vulnerabilities and recommending remediation strategies.</p>
+              <ul>
+                <li>Conducted vulnerability assessments on network configurations</li>
+                <li>Applied firewall rule hardening and access control improvements</li>
+                <li>Documented security findings and provided remediation roadmap</li>
+                <li>Aligned practices with CEH-certified methodology</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag">CEH</span><span class="tech-tag">Network Security</span>
+                <span class="tech-tag">Firewall</span><span class="tech-tag">Vulnerability Assessment</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <span class="section-tag">Work History</span>
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <div class="timeline-title">Software Support & Full Stack Developer</div>
+                  <div class="timeline-company">Sabanet ISP · Tehran, Iran</div>
+                </div>
+                <span class="timeline-period">Prior to M.Eng</span>
+              </div>
+              <ul>
+                <li>Developed and supported ASP.NET internal applications using C# and SQL Server</li>
+                <li>Maintained application performance through query and architecture optimization</li>
+                <li>Managed network connectivity and integration between application tiers</li>
+                <li>Provided technical support to internal departments</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <div class="timeline-title">IT Specialist</div>
+                  <div class="timeline-company">Sazehpad Engineering Firm · Tehran, Iran</div>
+                </div>
+                <span class="timeline-period">Prior to M.Eng</span>
+              </div>
+              <ul>
+                <li>Administered Windows Server 2012/2022 environments including Active Directory and DNS/DHCP</li>
+                <li>Managed hybrid infrastructure across multiple business departments</li>
+                <li>Maintained VMware virtualization environment and performed capacity planning</li>
+                <li>Delivered frontline and escalated IT support, ensuring minimal downtime</li>
+                <li>Enforced network security policies and data protection protocols</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="education">
+      <div class="container">
+        <span class="section-tag">Education</span>
+        <h2 class="section-title">Academic Background</h2>
+        <div class="edu-grid">
+          <div class="edu-card">
+            <div class="edu-degree">Master of Engineering — Electrical & Computer Engineering</div>
+            <div class="edu-school">University of Ottawa · Ottawa, Canada</div>
+            <div class="edu-year">Graduated / In Progress · 2025</div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-degree">Bachelor of Engineering — Computer Engineering (Software)</div>
+            <div class="edu-school">Islamic Azad University · Iran</div>
+            <div class="edu-year">Completed</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section id="contact" class="contact">
       <div class="container">
+        <span class="section-tag" style="background:rgba(44,126,248,0.2);color:var(--accent-light)">Get In Touch</span>
         <h2 class="section-title">Let's Connect</h2>
-        <div class="contact-content">
-          <div class="contact-info">
-            <h3>Ready to collaborate on your next IT or DevOps project?</h3>
-            <p>
-              I’m completing my Master’s at the University of Ottawa and am open to opportunities in 
-              system administration, DevOps, and infrastructure automation.
-            </p>
-
-            <div class="contact-details">
-              <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <div>
-                  <h4>Email</h4>
-                  <p><a href="mailto:mkian075@uottawa.ca">mkian075@uottawa.ca</a></p>
-                  <p><a href="mailto:MiladKianzadeh@cmail.carleton.ca">MiladKianzadeh@cmail.carleton.ca</a></p>
-                </div>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <div>
-                  <h4>Location</h4>
-                  <p>Ottawa, Ontario, Canada</p>
-                </div>
-              </div>
-              <div class="contact-item">
-                <i class="fab fa-linkedin"></i>
-                <div>
-                  <h4>LinkedIn</h4>
-                  <p><a href="https://linkedin.com/in/miladkianzadeh" target="_blank">linkedin.com/in/miladkianzadeh</a></p>
-                </div>
+        <p class="section-subtitle">Open to full-time or hybrid IT Specialist, IT Analyst, and Network & Systems Support roles in Ottawa and remotely.</p>
+        <div class="contact-grid">
+          <div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>University Email</h4>
+                <a href="mailto:mkian075@uottawa.ca">mkian075@uottawa.ca</a>
               </div>
             </div>
-
-            <div class="availability">
-              <h4><i class="fas fa-calendar-check"></i> Current Status</h4>
-              <p>Available for full-time or hybrid roles starting in 2025.</p>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:MiladKianzadeh@cmail.carleton.ca">MiladKianzadeh@cmail.carleton.ca</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-linkedin"></i>
+              <div>
+                <h4>LinkedIn</h4>
+                <a href="https://linkedin.com/in/miladkianzadeh" target="_blank">linkedin.com/in/miladkianzadeh</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Location</h4>
+                <p>Ottawa, Ontario, Canada</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="availability-card">
+              <h4><i class="fas fa-calendar-check"></i> &nbsp;Current Availability</h4>
+              <p>Available for full-time or hybrid roles immediately. Open to IT Specialist, IT Analyst, Network Support, Systems Administrator, and Help Desk (L2/L3) positions in Ottawa or remote.</p>
+            </div>
+            <div style="margin-top:1.5rem;">
+              <a href="mailto:mkian075@uottawa.ca" class="btn btn-primary" style="width:100%;justify-content:center;"><i class="fas fa-envelope"></i> Send an Email</a>
+              <a href="https://linkedin.com/in/miladkianzadeh" target="_blank" class="btn btn-secondary" style="width:100%;justify-content:center;margin-top:0.75rem;border-color:rgba(245,248,255,0.25);"><i class="fab fa-linkedin"></i> Connect on LinkedIn</a>
             </div>
           </div>
         </div>
@@ -302,57 +1091,81 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <div class="footer-content">
-          <p>&copy; 2025 Milad Kianzadeh. All rights reserved.</p>
-          <div class="social-links">
-            <a href="https://linkedin.com/in/miladkianzadeh" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/miladkianzadeh" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          </div>
+        <p>&copy; 2025 Milad Kianzadeh · IT Specialist | IT Analyst | Network & Systems Support</p>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/miladkianzadeh" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/miladkianzadeh" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
         </div>
       </div>
     </footer>
 
     <script>
-      const hamburger = document.querySelector(".hamburger");
-      const navMenu = document.querySelector(".nav-menu");
-      hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
+      // Mobile menu
+      const hamburger = document.querySelector('.hamburger');
+      const navMenu = document.querySelector('.nav-menu');
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
       });
-      document.querySelectorAll(".nav-menu a").forEach((link) => {
-        link.addEventListener("click", () => {
-          hamburger.classList.remove("active");
-          navMenu.classList.remove("active");
+      document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
         });
       });
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
+
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
           e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
       });
-      window.addEventListener("scroll", () => {
-        const sections = document.querySelectorAll("section");
-        const navLinks = document.querySelectorAll(".nav-menu a");
-        let current = "";
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
-          if (scrollY >= sectionTop - 200) current = section.getAttribute("id");
+
+      // Active nav highlight
+      window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        let current = '';
+        sections.forEach(section => {
+          if (scrollY >= section.offsetTop - 200) current = section.getAttribute('id');
         });
-        navLinks.forEach((link) => {
-          link.classList.remove("active");
-          if (link.getAttribute("href") === `#${current}`) link.classList.add("active");
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${current}`) link.classList.add('active');
         });
       });
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("animate");
+
+      // Cert filter
+      const filterBtns = document.querySelectorAll('.cert-filter-btn');
+      const certCards = document.querySelectorAll('.cert-card');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.dataset.filter;
+          certCards.forEach(card => {
+            if (filter === 'all' || card.dataset.category === filter) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
         });
-      }, { threshold: 0.1 });
-      document.querySelectorAll(".project-card, .skill-category").forEach((el) => observer.observe(el));
+      });
+
+      // Scroll animations
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.style.opacity = '1';
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.project-card, .skill-category, .cert-card, .about-card, .timeline-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transition = 'opacity 0.4s ease';
+        observer.observe(el);
+      });
     </script>
   </body>
 </html>
