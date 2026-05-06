@@ -967,6 +967,12 @@ section {
 
 .contact-item a:hover { color: var(--accent-light); }
 
+.contact-content,
+.contact-content h3,
+.contact-content p {
+  color: white;
+}
+
 .availability-card {
   background: rgba(44,126,248,0.15);
   border: 1px solid rgba(44,126,248,0.35);
@@ -1020,11 +1026,6 @@ section {
   color: rgba(245,248,255,0.5);
   text-decoration: none;
   transition: all 0.2s;
-}
-.contact-content,
-.contact-content h3,
-.contact-content p {
-  color: white;
 }
 
 .social-links a:hover {
