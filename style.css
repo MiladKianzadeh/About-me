@@ -675,6 +675,12 @@ section {
   display: inline-block;
   letter-spacing: 0.05em;
 }
+.cert-id {
+  font-size: 0.65rem;
+  color: var(--text-muted); /* or whatever your muted color variable is */
+  margin-top: 6px;
+  word-break: break-all;
+}
 
 .cert-badge.official  { background: rgba(44,126,248,0.1); color: var(--accent); }
 .cert-badge.completed { background: rgba(16,185,129,0.1); color: #0d9669; }
