@@ -673,6 +673,8 @@ section {
 .cert-icon.dev i      { color: #b57d1a; }
 .cert-icon.ml         { background: rgba(236,72,153,0.1); }
 .cert-icon.ml i       { color: #be185d; }
+.cert-icon.product { background: rgba(245,158,11,0.12); }
+.cert-icon.product i { color: #f59e0b; }
 
 .cert-card-body {
   flex: 1;
