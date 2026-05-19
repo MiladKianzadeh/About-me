@@ -490,16 +490,15 @@ section {
 }
 
 /* ── SKILLS ── */
+/* ── SKILLS ── */
 .skills {
   background: var(--light-bg);
 }
-
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
-
 .skill-category {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -507,12 +506,10 @@ section {
   padding: 1.75rem;
   transition: transform 0.25s, box-shadow 0.25s;
 }
-
 .skill-category:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow);
 }
-
 .skill-category h3 {
   display: flex;
   align-items: center;
@@ -524,18 +521,15 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-
 .skill-category h3 i {
   color: var(--accent);
   font-size: 1rem;
 }
-
 .skill-list {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
 }
-
 .skill-item {
   display: flex;
   justify-content: space-between;
@@ -545,12 +539,10 @@ section {
   background: var(--light-bg);
   font-size: 0.88rem;
 }
-
 .skill-name {
   color: var(--text);
   font-weight: 500;
 }
-
 .skill-level {
   font-size: 0.72rem;
   font-weight: 700;
@@ -559,10 +551,10 @@ section {
   padding: 0.2rem 0.6rem;
   border-radius: 100px;
 }
-
-.skill-level.expert      { background: rgba(44,126,248,0.12); color: var(--accent); }
-.skill-level.advanced    { background: rgba(16,185,129,0.12); color: #0d9669; }
-.skill-level.intermediate{ background: rgba(232,168,56,0.12); color: #b57d1a; }
+.skill-level.expert       { background: rgba(44,126,248,0.12);  color: var(--accent); }
+.skill-level.advanced     { background: rgba(16,185,129,0.12);  color: #0d9669; }
+.skill-level.intermediate { background: rgba(232,168,56,0.12);  color: #b57d1a; }
+.skill-level.beginner     { background: rgba(148,163,184,0.15); color: #64748b; }
 
 /* =========================
    Certifications Section
