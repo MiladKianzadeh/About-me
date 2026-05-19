@@ -564,10 +564,17 @@ section {
 .skill-level.advanced    { background: rgba(16,185,129,0.12); color: #0d9669; }
 .skill-level.intermediate{ background: rgba(232,168,56,0.12); color: #b57d1a; }
 
-/* ── CERTIFICATIONS ── */
+/* =========================
+   Certifications Section
+========================= */
+
 .certifications {
   background: var(--white);
 }
+
+/* =========================
+   Filter Buttons
+========================= */
 
 .cert-filter {
   display: flex;
@@ -595,11 +602,19 @@ section {
   border-color: var(--accent);
 }
 
+/* =========================
+   Grid Layout
+========================= */
+
 .cert-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1rem;
 }
+
+/* =========================
+   Certificate Card
+========================= */
 
 .cert-card {
   background: var(--card-bg);
@@ -622,6 +637,11 @@ section {
   display: none;
 }
 
+/* =========================
+   Icons Base Style
+========================= */
+
+
 .cert-icon {
   width: 36px;
   height: 36px;
@@ -635,15 +655,14 @@ section {
 
 .cert-icon i { font-size: 0.95rem; }
 
-.cert-icon.networking { background: rgba(44,126,248,0.1); }
-.cert-icon.networking i { color: var(--accent); }
-.cert-icon.cisco {
-  background: rgba(0,188,235,0.12);
-}
+/* =========================
+   Category Colors
+========================= */
 
-.cert-icon.cisco i {
-  color: #00bceb;
-}
+.cert-icon.networking { background: rgba(44,126,248,0.1); }
+.cert-icon.networking i {  color: #2c7ef8; }
+.cert-icon.cisco { background: rgba(0,188,235,0.12); }
+.cert-icon.cisco i { color: #00bceb; }
 .cert-icon.os         { background: rgba(16,185,129,0.1); }
 .cert-icon.os i       { color: #0d9669; }
 .cert-icon.devops     { background: rgba(139,92,246,0.1); }
