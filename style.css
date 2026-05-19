@@ -597,7 +597,7 @@ section {
 
 .cert-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1rem;
 }
 
@@ -609,12 +609,13 @@ section {
   display: flex;
   gap: 1rem;
   align-items: flex-start;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
 .cert-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow);
+  border-color: rgba(0,0,0,0.12);
 }
 
 .cert-card.hidden {
@@ -636,8 +637,13 @@ section {
 
 .cert-icon.networking { background: rgba(44,126,248,0.1); }
 .cert-icon.networking i { color: var(--accent); }
-.cert-icon.Cisco { background: rgba(44,126,248,0.1); }
-.cert-icon.Cisco i { color: var(--accent); }
+.cert-icon.cisco {
+  background: rgba(0,188,235,0.12);
+}
+
+.cert-icon.cisco i {
+  color: #00bceb;
+}
 .cert-icon.os         { background: rgba(16,185,129,0.1); }
 .cert-icon.os i       { color: #0d9669; }
 .cert-icon.devops     { background: rgba(139,92,246,0.1); }
@@ -679,7 +685,7 @@ section {
 }
 .cert-id {
   font-size: 0.65rem;
-  color: var(--text-muted); /* or whatever your muted color variable is */
+  color: var(--muted); 
   margin-top: 6px;
   word-break: break-all;
 }
