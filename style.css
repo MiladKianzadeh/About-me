@@ -636,6 +636,8 @@ section {
 
 .cert-icon.networking { background: rgba(44,126,248,0.1); }
 .cert-icon.networking i { color: var(--accent); }
+.cert-icon.Cisco { background: rgba(44,126,248,0.1); }
+.cert-icon.Cisco i { color: var(--accent); }
 .cert-icon.os         { background: rgba(16,185,129,0.1); }
 .cert-icon.os i       { color: #0d9669; }
 .cert-icon.devops     { background: rgba(139,92,246,0.1); }
