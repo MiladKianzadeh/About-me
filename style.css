@@ -663,6 +663,8 @@ section {
 .cert-icon.security i { color: #dc2626; }
 .cert-icon.dev        { background: rgba(232,168,56,0.1); }
 .cert-icon.dev i      { color: #b57d1a; }
+.cert-icon.Cloud      { background: rgba(56, 189, 248, 0.1); }
+.cert-icon.Cloud i    { color: #0284c7; }
 .cert-icon.ml         { background: rgba(236,72,153,0.1); }
 .cert-icon.ml i       { color: #be185d; }
 .cert-icon.product { background: rgba(245,158,11,0.12); }
