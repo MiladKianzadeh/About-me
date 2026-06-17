@@ -140,7 +140,6 @@ section {
   transition: all 0.3s;
 }
 
-/* Hamburger → X animation */
 .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
 .hamburger.active span:nth-child(2) { opacity: 0; }
 .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
@@ -348,7 +347,6 @@ section {
   transform: scale(1.05);
 }
 
-/* Fallback icon when image is absent */
 .profile-circle i {
   font-size: 5rem;
   color: rgba(245,248,255,0.25);
@@ -490,15 +488,16 @@ section {
 }
 
 /* ── SKILLS ── */
-/* ── SKILLS ── */
 .skills {
   background: var(--light-bg);
 }
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
+
 .skill-category {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -506,10 +505,12 @@ section {
   padding: 1.75rem;
   transition: transform 0.25s, box-shadow 0.25s;
 }
+
 .skill-category:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow);
 }
+
 .skill-category h3 {
   display: flex;
   align-items: center;
@@ -521,15 +522,18 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+
 .skill-category h3 i {
   color: var(--accent);
   font-size: 1rem;
 }
+
 .skill-list {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
 }
+
 .skill-item {
   display: flex;
   justify-content: space-between;
@@ -539,10 +543,12 @@ section {
   background: var(--light-bg);
   font-size: 0.88rem;
 }
+
 .skill-name {
   color: var(--text);
   font-weight: 500;
 }
+
 .skill-level {
   font-size: 0.72rem;
   font-weight: 700;
@@ -551,6 +557,7 @@ section {
   padding: 0.2rem 0.6rem;
   border-radius: 100px;
 }
+
 .skill-level.expert       { background: rgba(44,126,248,0.12);  color: var(--accent); }
 .skill-level.advanced     { background: rgba(16,185,129,0.12);  color: #0d9669; }
 .skill-level.intermediate { background: rgba(232,168,56,0.12);  color: #b57d1a; }
@@ -600,7 +607,8 @@ section {
 
 .cert-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  /* FIX: auto-fill keeps column count stable; minmax floor prevents over-stretching */
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1rem;
 }
 
@@ -612,10 +620,12 @@ section {
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.25rem 1.4rem;
+  /* FIX: extra top padding so the Top badge doesn't clip into the card title */
+  padding: 1.4rem 1.4rem 1.25rem;
   display: flex;
   gap: 1rem;
   align-items: flex-start;
+  position: relative; /* needed for .top-badge absolute positioning */
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
@@ -625,14 +635,37 @@ section {
   border-color: rgba(0,0,0,0.12);
 }
 
+/* FIX: highlighted "Top" cards get a blue border accent */
+.cert-card.top-course {
+  border-color: rgba(44,126,248,0.45);
+}
+
 .cert-card.hidden {
   display: none;
 }
 
 /* =========================
-   Icons Base Style
+   Top Badge  (FIX: was missing entirely)
 ========================= */
 
+.top-badge {
+  position: absolute;
+  top: -1px;
+  right: 12px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 0 0 6px 6px;
+  background: var(--accent);
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* =========================
+   Icons Base Style
+========================= */
 
 .cert-icon {
   width: 36px;
@@ -645,30 +678,50 @@ section {
   margin-top: 0.1rem;
 }
 
-.cert-icon i { font-size: 0.95rem; }
+/* FIX: bumped from 0.95rem — icons were slightly too small */
+.cert-icon i { font-size: 1rem; }
 
 /* =========================
    Category Colors
+   FIX: renamed .cert-icon.Cloud → .cert-icon.cloud (lowercase)
+   FIX: added missing .cert-icon.versioncontrol rule
 ========================= */
 
-.cert-icon.networking { background: rgba(44,126,248,0.1); }
-.cert-icon.networking i {  color: #2c7ef8; }
-.cert-icon.cisco { background: rgba(0,188,235,0.12); }
-.cert-icon.cisco i { color: #00bceb; }
-.cert-icon.os         { background: rgba(16,185,129,0.1); }
-.cert-icon.os i       { color: #0d9669; }
-.cert-icon.devops     { background: rgba(139,92,246,0.1); }
-.cert-icon.devops i   { color: #7c3aed; }
-.cert-icon.security   { background: rgba(239,68,68,0.1); }
-.cert-icon.security i { color: #dc2626; }
-.cert-icon.dev        { background: rgba(232,168,56,0.1); }
-.cert-icon.dev i      { color: #b57d1a; }
-.cert-icon.Cloud      { background: rgba(56, 189, 248, 0.1); }
-.cert-icon.Cloud i    { color: #0284c7; }
-.cert-icon.ml         { background: rgba(236,72,153,0.1); }
-.cert-icon.ml i       { color: #be185d; }
-.cert-icon.product { background: rgba(245,158,11,0.12); }
-.cert-icon.product i { color: #f59e0b; }
+.cert-icon.networking   { background: rgba(44,126,248,0.10); }
+.cert-icon.networking i { color: #2c7ef8; }
+
+.cert-icon.cisco        { background: rgba(0,188,235,0.12); }
+.cert-icon.cisco i      { color: #00bceb; }
+
+.cert-icon.os           { background: rgba(16,185,129,0.10); }
+.cert-icon.os i         { color: #0d9669; }
+
+/* FIX: was .cert-icon.Cloud — capital C never matched the lowercase attribute */
+.cert-icon.cloud        { background: rgba(56,189,248,0.10); }
+.cert-icon.cloud i      { color: #0284c7; }
+
+/* FIX: versioncontrol had no rule at all — icons rendered unstyled */
+.cert-icon.versioncontrol   { background: rgba(44,126,248,0.10); }
+.cert-icon.versioncontrol i { color: #2c7ef8; }
+
+.cert-icon.devops       { background: rgba(139,92,246,0.10); }
+.cert-icon.devops i     { color: #7c3aed; }
+
+.cert-icon.security     { background: rgba(239,68,68,0.10); }
+.cert-icon.security i   { color: #dc2626; }
+
+.cert-icon.dev          { background: rgba(232,168,56,0.10); }
+.cert-icon.dev i        { color: #b57d1a; }
+
+.cert-icon.ml           { background: rgba(236,72,153,0.10); }
+.cert-icon.ml i         { color: #be185d; }
+
+.cert-icon.product      { background: rgba(245,158,11,0.12); }
+.cert-icon.product i    { color: #f59e0b; }
+
+/* =========================
+   Card Body
+========================= */
 
 .cert-card-body {
   flex: 1;
@@ -688,6 +741,14 @@ section {
   color: var(--muted);
 }
 
+.cert-id {
+  font-size: 0.65rem;
+  color: var(--muted);
+  margin-top: 6px;
+  word-break: break-all;
+  line-height: 1.4;
+}
+
 .cert-badge {
   font-size: 0.68rem;
   font-weight: 700;
@@ -697,12 +758,6 @@ section {
   margin-top: 0.35rem;
   display: inline-block;
   letter-spacing: 0.05em;
-}
-.cert-id {
-  font-size: 0.65rem;
-  color: var(--muted); 
-  margin-top: 6px;
-  word-break: break-all;
 }
 
 .cert-badge.official  { background: rgba(44,126,248,0.1); color: var(--accent); }
@@ -951,7 +1006,7 @@ section {
   background: var(--navy);
 }
 
-.contact .section-title { color: var(--white); }
+.contact .section-title    { color: var(--white); }
 .contact .section-subtitle { color: rgba(245,248,255,0.6); }
 
 .contact-grid {
@@ -1065,14 +1120,14 @@ section {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
-  .hero-content            { grid-template-columns: 1fr; }
-  .profile-circle          { display: none; }
+  .hero-content   { grid-template-columns: 1fr; }
+  .profile-circle { display: none; }
   .about-grid,
   .skills-grid,
   .projects-grid,
   .edu-grid,
-  .contact-grid            { grid-template-columns: 1fr; }
-  .cert-grid               { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid   { grid-template-columns: 1fr; }
+  .cert-grid      { grid-template-columns: repeat(2, 1fr); }
   .nav-menu {
     display: none;
     flex-direction: column;
@@ -1082,13 +1137,13 @@ section {
     padding: 1rem 2rem 2rem;
     gap: 1rem;
   }
-  .nav-menu.active         { display: flex; }
-  .hamburger               { display: flex; }
+  .nav-menu.active { display: flex; }
+  .hamburger       { display: flex; }
 }
 
 @media (max-width: 600px) {
-  .cert-grid               { grid-template-columns: 1fr; }
-  .hero-stats              { gap: 1.5rem; }
-  .hero-buttons            { flex-direction: column; align-items: flex-start; }
-  .hero-buttons .btn       { width: 100%; justify-content: center; }
+  .cert-grid              { grid-template-columns: 1fr; }
+  .hero-stats             { gap: 1.5rem; }
+  .hero-buttons           { flex-direction: column; align-items: flex-start; }
+  .hero-buttons .btn      { width: 100%; justify-content: center; }
 }
