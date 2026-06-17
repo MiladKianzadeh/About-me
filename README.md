@@ -6,7 +6,7 @@ Welcome to my personal portfolio website showcasing my background in IT infrastr
 
 View my live site here:
 
-🔗 [https://miladkianzadeh.github.io/About-me/](https://www.google.com/search?q=https://miladkianzadeh.github.io/About-me/)
+🔗 [https://miladkianzadeh.github.io/About-me/](https://miladkianzadeh.github.io/About-me/)
 
 ---
 
