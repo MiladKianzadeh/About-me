@@ -19,7 +19,26 @@
   --radius:      12px;
   --shadow:      0 4px 24px rgba(11,31,58,0.10);
   --shadow-lg:   0 12px 48px rgba(11,31,58,0.16);
+
+  /* fiber-optic network theme */
+  --fiber-core:  #8fd8ff;
+  --fiber-glow:  rgba(90,157,251,0.55);
+  --fiber-gold:  #e8a838;
+  --fiber-track: rgba(11,31,58,0.10);
+  --fiber-track-dark: rgba(245,248,255,0.14);
 }
+
+/* ── SCROLLBAR: styled as a fiber-optic strand ── */
+html { scrollbar-width: thin; scrollbar-color: var(--accent) var(--light-bg); }
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--light-bg); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--fiber-core), var(--accent));
+  border-radius: 100px;
+  box-shadow: 0 0 8px var(--fiber-glow);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--fiber-core); }
 
 /* ── RESET ── */
 *, *::before, *::after {
@@ -1118,7 +1137,189 @@ section {
   border-color: var(--accent);
 }
 
+/* ============================================================
+   FIBER-OPTIC NETWORK THEME
+   Ambient node canvas + a scroll-driven signal rail that carries
+   a light pulse down through the page, "coupling" into each
+   section as it's reached.
+   ============================================================ */
+
+/* ambient particle/network canvas, fixed behind all content */
+.network-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+/* everything else needs to sit above the canvas */
+.navbar, .hero, .target-roles, .about, .skills, .certifications,
+.projects, .experience, .education, .contact, .footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── FIBER SIGNAL RAIL ── */
+.fiber-rail {
+  position: fixed;
+  top: 0;
+  left: 28px;
+  height: 100vh;
+  width: 40px;
+  z-index: 900;
+  pointer-events: none;
+}
+
+.fiber-track {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg,
+    rgba(44,126,248,0.08) 0%,
+    rgba(44,126,248,0.28) 8%,
+    rgba(44,126,248,0.28) 92%,
+    rgba(44,126,248,0.08) 100%);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.fiber-track::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(180deg,
+    transparent 0px, transparent 6px,
+    rgba(255,255,255,0.5) 6px, rgba(255,255,255,0.5) 7px);
+  opacity: 0.35;
+}
+
+/* the traveling light pulse - position set by JS via --pulse-top */
+.fiber-pulse {
+  position: absolute;
+  left: 50%;
+  top: var(--pulse-top, 0%);
+  width: 14px;
+  height: 14px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff 0%, var(--fiber-core) 45%, transparent 75%);
+  box-shadow: 0 0 12px 4px var(--fiber-glow), 0 0 24px 8px rgba(143,216,255,0.35);
+  pointer-events: none;
+}
+
+.fiber-pulse::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  width: 2px;
+  height: 60px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, transparent, var(--fiber-core));
+  opacity: 0.6;
+}
+
+.fiber-node {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+}
+
+.fiber-node-dot {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 2px solid rgba(44,126,248,0.35);
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.fiber-node.lit .fiber-node-dot {
+  background: var(--fiber-core);
+  border-color: var(--fiber-core);
+  box-shadow: 0 0 10px 3px var(--fiber-glow);
+  transform: scale(1.15);
+}
+
+.fiber-node-label {
+  position: absolute;
+  left: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  border-radius: 100px;
+  background: var(--navy);
+  color: rgba(245,248,255,0.85);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.fiber-node.lit .fiber-node-label {
+  opacity: 0.9;
+}
+
+/* signal-received flash on section tags as the pulse reaches them */
+@keyframes fiberFlash {
+  0%   { box-shadow: 0 0 0 0 rgba(44,126,248,0); }
+  30%  { box-shadow: 0 0 0 6px rgba(44,126,248,0.18); }
+  100% { box-shadow: 0 0 0 0 rgba(44,126,248,0); }
+}
+
+.section-tag.signal-lit {
+  animation: fiberFlash 1s ease-out;
+}
+
+/* hero: animated data-flow streaks through the grid */
+.hero-grid-bg {
+  animation: gridDrift 30s linear infinite;
+}
+
+@keyframes gridDrift {
+  0%   { background-position: 0 0, 0 0; }
+  100% { background-position: 0 480px, 480px 0; }
+}
+
+.hero-fiber-streaks {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.hero-fiber-streaks span {
+  position: absolute;
+  width: 1px;
+  height: 140px;
+  background: linear-gradient(180deg, transparent, var(--fiber-core), transparent);
+  top: -160px;
+  animation: streakFall linear infinite;
+}
+
+@keyframes streakFall {
+  to { transform: translateY(calc(100vh + 320px)); }
+}
+
 /* ── RESPONSIVE ── */
+@media (max-width: 1280px) {
+  .fiber-rail { display: none; }
+}
+
 @media (max-width: 900px) {
   .hero-content   { grid-template-columns: 1fr; }
   .profile-circle { display: none; }
@@ -1146,4 +1347,13 @@ section {
   .hero-stats             { gap: 1.5rem; }
   .hero-buttons           { flex-direction: column; align-items: flex-start; }
   .hero-buttons .btn      { width: 100%; justify-content: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fiber-pulse, .hero-grid-bg, .hero-fiber-streaks span,
+  .network-canvas, .fiber-node-dot, .section-tag.signal-lit {
+    animation: none !important;
+    transition: none !important;
+  }
+  .network-canvas { display: none; }
 }
