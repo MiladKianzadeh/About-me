@@ -3,15 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Milad Kianzadeh – IT Specialist | IT Analyst | Network & Systems Support professional with experience in network administration, systems support, IT infrastructure, and technical troubleshooting." />
-    <meta name="keywords" content="IT Specialist, IT Analyst, Network Support, Systems Support, CCNA, CCNP, MCSA, Windows Server, Active Directory, Docker, Kubernetes, ASP.NET WebForms, ADO.NET, SQL Server, Ottawa" />
+    <meta name="description" content="Milad Kianzadeh – Systems & Network Administration | Technical Support Engineer | Network Security Analyst professional with experience in network operations, systems support, IT infrastructure, and technical troubleshooting." />
+    <meta name="keywords" content="Systems and Network Administrator, Technical Support Engineer, Information Security Analyst, Network Security Analyst, Network Administrator, Network Specialist, IT Analyst, Network Support Analyst, IT Specialist, Network Control Technician, IT Help Desk, Ottawa" />
     <meta name="author" content="Milad Kianzadeh" />
-    <title>Milad Kianzadeh – IT Specialist & Network Systems Support</title>
+    <title>Milad Kianzadeh – Systems & Network Infrastructure Professional</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
+    <!-- Ambient fiber-optic network background -->
+    <canvas class="network-canvas" id="networkCanvas"></canvas>
+
+    <!-- Scroll-driven fiber signal rail -->
+    <div class="fiber-rail" id="fiberRail">
+      <div class="fiber-track"></div>
+      <div class="fiber-pulse" id="fiberPulse"></div>
+    </div>
 
     <!-- Navigation -->
     <nav class="navbar">
@@ -20,6 +29,7 @@
         <ul class="nav-menu">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#certifications">Certifications</a></li>
           <li><a href="#experience">Experience</a></li>
@@ -29,18 +39,19 @@
       </div>
     </nav>
 
-    <!-- Hero -->
+   <!-- Hero -->
     <section id="home" class="hero">
       <div class="hero-grid-bg"></div>
+      <div class="hero-fiber-streaks" id="heroStreaks"></div>
       <div class="hero-container">
         <div class="hero-content">
           <div class="hero-text">
             <div class="hero-eyebrow"><i class="fas fa-map-marker-alt"></i> Ottawa, Ontario · Available Now</div>
-            <h1>IT Specialist &<br>Network Systems Support</h1>
+            <h1>Systems & Network<br>Infrastructure Professional</h1>
             <div class="hero-roles">
-              <span class="role-badge"><i class="fas fa-briefcase"></i> IT Specialist</span>
-              <span class="role-badge"><i class="fas fa-chart-bar"></i> IT Analyst</span>
-              <span class="role-badge"><i class="fas fa-network-wired"></i> Network & Systems Support</span>
+              <span class="role-badge"><i class="fas fa-tools"></i> Systems and Network Administrator</span>
+              <span class="role-badge"><i class="fas fa-shield-alt"></i> Network Security Analyst</span>
+              <span class="role-badge"><i class="fas fa-cogs"></i> Technical Support Engineer</span>
             </div>
             <p class="hero-subtitle">M.Eng in Electrical & Computer Engineering · Experience in Network Administration, Systems Support & IT Infrastructure</p>
             <p class="hero-description">
@@ -85,26 +96,40 @@
         <div class="target-roles-inner">
           <span class="target-roles-label">Seeking roles in</span>
           <div class="target-roles-list">
-            <span class="target-role-pill"><i class="fas fa-desktop"></i> IT Specialist</span>
-            <span class="target-role-pill"><i class="fas fa-search"></i> IT Analyst</span>
-            <span class="target-role-pill"><i class="fas fa-network-wired"></i> Network Administrator</span>
-            <span class="target-role-pill"><i class="fas fa-server"></i> Systems Support</span>
-            <span class="target-role-pill"><i class="fas fa-tools"></i> IT Help Desk</span>
+            <!--<span class="target-role-pill"><i class="fas fa-desktop"></i> Network Engineer</span> -->
+            <!--<span class="target-role-pill"><i class="fas fa-desktop"></i> DevOps Engineer</span> -->
+            <!--<span class="target-role-pill"><i class="fas fa-search"></i> Cybersecurity Analyst / Specialist</span> </span> -->
+
+            <!-- Advanced & Engineering (Professional) -->
+            <span class="target-role-pill"><i class="fas fa-tools"></i> Systems and Network Administrator</span>
+            <span class="target-role-pill"><i class="fas fa-cogs"></i> Technical Support Engineer</span>
+            <span class="target-role-pill"><i class="fas fa-user-shield"></i> Information Security Analyst</span>
+            <span class="target-role-pill"><i class="fas fa-shield-alt"></i> Network Security Analyst</span>
+            <span class="target-role-pill"><i class="fas fa-server"></i> Network Administrator</span>
+
+            <!-- Mid-Level & Operational (Intermediate) -->
+            <span class="target-role-pill"><i class="fas fa-network-wired"></i> Network Specialist</span>
+            <span class="target-role-pill"><i class="fas fa-chart-bar"></i> IT Analyst</span>
+            <span class="target-role-pill"><i class="fas fa-project-diagram"></i> Network Support Analyst</span>
+            <span class="target-role-pill"><i class="fas fa-laptop-code"></i> IT Specialist</span>
+
+            <!-- Foundational & Entry-Level (Basic) -->
+            <span class="target-role-pill"><i class="fas fa-sliders-h"></i> Network Control Technician</span>
+            <span class="target-role-pill"><i class="fas fa-headset"></i> IT Help Desk / Support Specialist</span>
+          </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- About -->
+<!-- About -->
     <section id="about" class="about">
       <div class="container">
-        <span class="section-tag">Professional Summary</span>
+        <span class="section-tag">Professional Identity</span>
         <h2 class="section-title">About Me</h2>
+
         <div class="about-lead">
-          Master of Engineering graduate in Electrical & Computer Engineering from the University of Ottawa with a Bachelor's degree in Computer Engineering – Software from Islamic Azad University.
-          Broad experience across network administration, systems support, and IT infrastructure.
-          Experienced in diagnosing and resolving network, hardware, and system issues, managing Windows Server environments, and supporting day-to-day IT operations.
-          Background includes technical training completion in networking protocols, systems management, database development, and structured IT help desk support workflows.
+          <strong>Professional Statement:</strong> Logistically-minded Systems and Network Infrastructure Professional with an M.Eng from the University of Ottawa and extensive experience managing Windows Server, Active Directory, and enterprise routing environments. Leveraging a strong technical background and an analytical approach to auditing networks, I excel at identifying infrastructure weaknesses and deploying rapid, secure engineering solutions. Driven by a high standard of professional ethics, impartiality, and a dedication to continuous learning, I protect organizational assets and maintain a resilient corporate security posture.
         </div>
 
         <div class="about-grid">
@@ -131,6 +156,99 @@
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <span class="section-tag">Technical Deliverables</span>
+        <h2 class="section-title">Core Systems, Networking &amp; Security Projects</h2>
+        <p class="section-subtitle">
+          Applied environments and database architectures demonstrating my hands-on technical competencies.
+        </p>
+
+        <div class="projects-grid">
+
+          <!-- Section 1: Active Directory & GPO Hardening -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-header-icon"><i class="fas fa-server"></i></div>
+              <div>
+                <h3>Enterprise Directory Services & GPO Hardening</h3>
+                <div class="project-meta">Identity & Access Management Audit</div>
+              </div>
+            </div>
+            <div class="project-content">
+              <p>
+                Configured and evaluated centralized directory environments to validate access management boundaries, handle secure permissions, and manage user provisioning profiles.
+              </p>
+              <ul>
+                <li><strong>Identity Governance:</strong> Managed Active Directory domain trees, user credentials, and security groups to enforce operational access control properties.</li>
+                <li><strong>Policy Enforcement:</strong> Designed and deployed structured Group Policy Objects (GPOs) using Windows Server 2022/2025 workflows to implement workstation desktop lockdowns.</li>
+                <li><strong>Infrastructure Control:</strong> Configured local environment foundations including secure DNS forward zones and automated DHCP address pool scopes.</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag">Active Directory</span>
+                <span class="tech-tag">Windows Server</span>
+                <span class="tech-tag">Group Policy (GPO)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2: Routing & Switching Isolation -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-header-icon"><i class="fas fa-network-wired"></i></div>
+              <div>
+                <h3>Multi-Vendor LAN/WAN Infrastructure Auditing</h3>
+                <div class="project-meta">Network Topology & Analysis</div>
+              </div>
+            </div>
+            <div class="project-content">
+              <p>
+                Engineered, tracked, and troubleshooted robust routing protocols and local area network architectures across multi-vendor enterprise equipment standards.
+              </p>
+              <ul>
+                <li><strong>Topology Segmentation:</strong> Configured virtual local area networks (VLANs) and secure broadcast domain isolation lines using managed access switches.</li>
+                <li><strong>Protocol Operations:</strong> Managed complex address translation parameters using structured TCP/IP design schemes, subnets, and routing table policies.</li>
+                <li><strong>Triage Diagnostics:</strong> Executed systematic network monitoring and baseline troubleshooting protocols on Cisco systems and MikroTik RouterOS.</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag">Cisco Routing & Switching</span>
+                <span class="tech-tag">MikroTik RouterOS</span>
+                <span class="tech-tag">Network Troubleshooting</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 3: Secure Web Development & SQL Verification -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-header-icon"><i class="fas fa-code"></i></div>
+              <div>
+                <h3>Secure Application Engineering & Database Validation</h3>
+                <div class="project-meta">Software & Data Integration</div>
+              </div>
+            </div>
+            <div class="project-content">
+              <p>
+                Developed transactional application logic branches and audited relational database structures to resolve application bugs and optimize filter strings.
+              </p>
+              <ul>
+                <li><strong>Backend Integration:</strong> Built secure database connectivity logic features utilizing ASP.NET WebForms and ADO.NET abstraction components.</li>
+                <li><strong>Database Querying:</strong> Constructed and audited robust relational filters within MS SQL Server environments to troubleshoot data system anomalies.</li>
+                <li><strong>Version Control:</strong> Documented application patch states, structural modifications, and development code paths using Git repository trees.</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag">ASP.NET & ADO.NET</span>
+                <span class="tech-tag">MS SQL Server</span>
+                <span class="tech-tag">Git Version Control</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -503,6 +621,14 @@
               <div class="cert-title">CEH Ethical Hacking</div>
               <div class="cert-issuer">Maktabkhooneh</div>
               <div class="cert-id">ID: MK-MBGDYF</div>
+            </div>
+          </div>
+            <div class="cert-card top-course" data-category="security">
+            <div class="cert-icon security"><i class="fas fa-user-shield"></i></div>
+            <div class="cert-card-body">
+              <div class="cert-title">Google Foundations of Cybersecurity</div>
+              <div class="cert-issuer">Coursera</div>
+              <div class="cert-id">ID:</div>
             </div>
           </div>
 
@@ -963,6 +1089,187 @@
         el.style.transition = 'opacity 0.4s ease';
         observer.observe(el);
       });
+
+      // ================================================================
+      // FIBER-OPTIC NETWORK THEME
+      // Ambient particle network + scroll-driven signal rail
+      // ================================================================
+      (function () {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        /* ---- Hero fiber streaks (falling light strands) ---- */
+        const streaksHost = document.getElementById('heroStreaks');
+        if (streaksHost && !reduceMotion) {
+          const count = 14;
+          for (let i = 0; i < count; i++) {
+            const s = document.createElement('span');
+            s.style.left = Math.random() * 100 + '%';
+            s.style.animationDuration = (4 + Math.random() * 5) + 's';
+            s.style.animationDelay = (Math.random() * 6) + 's';
+            s.style.opacity = (0.25 + Math.random() * 0.5).toFixed(2);
+            streaksHost.appendChild(s);
+          }
+        }
+
+        /* ---- Fiber signal rail: nodes + traveling pulse ---- */
+        const fiberRail = document.getElementById('fiberRail');
+        const fiberPulse = document.getElementById('fiberPulse');
+        const railSections = Array.from(document.querySelectorAll('section[id]'));
+        const navLabelMap = {};
+        document.querySelectorAll('.nav-menu a').forEach(a => {
+          const id = a.getAttribute('href').replace('#', '');
+          navLabelMap[id] = a.textContent.trim();
+        });
+
+        const fiberNodes = [];
+        if (fiberRail && railSections.length) {
+          railSections.forEach(section => {
+            const label = navLabelMap[section.id] || section.id;
+            const node = document.createElement('div');
+            node.className = 'fiber-node';
+            node.innerHTML = `<div class="fiber-node-dot"></div><div class="fiber-node-label">${label}</div>`;
+            fiberRail.appendChild(node);
+            fiberNodes.push({ section, el: node });
+          });
+        }
+
+        function scrollRange() {
+          return Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+        }
+
+        function layoutFiberNodes() {
+          const range = scrollRange();
+          fiberNodes.forEach(n => {
+            const pct = Math.min(100, Math.max(0, (n.section.offsetTop / range) * 100));
+            n.el.style.top = pct + '%';
+          });
+        }
+
+        function updateFiberProgress() {
+          const range = scrollRange();
+          const pct = Math.min(100, Math.max(0, (window.scrollY / range) * 100));
+          if (fiberPulse) fiberPulse.style.setProperty('--pulse-top', pct + '%');
+          fiberNodes.forEach(n => {
+            const nodePct = parseFloat(n.el.style.top) || 0;
+            n.el.classList.toggle('lit', pct >= nodePct - 0.5);
+          });
+        }
+
+        layoutFiberNodes();
+        updateFiberProgress();
+        window.addEventListener('scroll', updateFiberProgress, { passive: true });
+        window.addEventListener('resize', () => { layoutFiberNodes(); updateFiberProgress(); });
+
+        /* ---- Signal-received flash on section tags ---- */
+        const tagObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('signal-lit');
+              tagObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.4 });
+        document.querySelectorAll('.section-tag').forEach(tag => tagObserver.observe(tag));
+
+        /* ---- Ambient network-node canvas ---- */
+        const canvas = document.getElementById('networkCanvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let width, height, particles = [];
+        const isMobile = window.innerWidth < 700;
+        const particleCount = reduceMotion ? 0 : (isMobile ? 26 : 55);
+        const linkDist = isMobile ? 110 : 150;
+
+        function resizeCanvas() {
+          width = canvas.width = window.innerWidth;
+          height = canvas.height = window.innerHeight;
+        }
+
+        function initParticles() {
+          particles = [];
+          for (let i = 0; i < particleCount; i++) {
+            particles.push({
+              x: Math.random() * width,
+              y: Math.random() * height,
+              vx: (Math.random() - 0.5) * 0.25,
+              vy: (Math.random() - 0.5) * 0.25,
+            });
+          }
+        }
+
+        // occasional bright "data packet" traveling along a link
+        let packets = [];
+        function maybeSpawnPacket() {
+          if (particles.length < 2 || Math.random() > 0.02) return;
+          const a = particles[Math.floor(Math.random() * particles.length)];
+          let b = null, best = Infinity;
+          particles.forEach(p => {
+            if (p === a) return;
+            const d = Math.hypot(p.x - a.x, p.y - a.y);
+            if (d < linkDist && d < best) { best = d; b = p; }
+          });
+          if (b) packets.push({ a, b, t: 0 });
+        }
+
+        function draw() {
+          ctx.clearRect(0, 0, width, height);
+
+          // update + draw particles
+          particles.forEach(p => {
+            p.x += p.vx; p.y += p.vy;
+            if (p.x < 0 || p.x > width) p.vx *= -1;
+            if (p.y < 0 || p.y > height) p.vy *= -1;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, 1.6, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(44,126,248,0.55)';
+            ctx.fill();
+          });
+
+          // connecting lines
+          for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+              const p1 = particles[i], p2 = particles[j];
+              const d = Math.hypot(p1.x - p2.x, p1.y - p2.y);
+              if (d < linkDist) {
+                ctx.beginPath();
+                ctx.moveTo(p1.x, p1.y);
+                ctx.lineTo(p2.x, p2.y);
+                ctx.strokeStyle = `rgba(90,157,251,${0.18 * (1 - d / linkDist)})`;
+                ctx.lineWidth = 1;
+                ctx.stroke();
+              }
+            }
+          }
+
+          // traveling packets (bright pulses along links)
+          maybeSpawnPacket();
+          packets.forEach(pk => { pk.t += 0.02; });
+          packets = packets.filter(pk => pk.t <= 1);
+          packets.forEach(pk => {
+            const x = pk.a.x + (pk.b.x - pk.a.x) * pk.t;
+            const y = pk.a.y + (pk.b.y - pk.a.y) * pk.t;
+            ctx.beginPath();
+            ctx.arc(x, y, 2.4, 0, Math.PI * 2);
+            ctx.fillStyle = '#8fd8ff';
+            ctx.shadowColor = '#8fd8ff';
+            ctx.shadowBlur = 8;
+            ctx.fill();
+            ctx.shadowBlur = 0;
+          });
+
+          if (!reduceMotion) requestAnimationFrame(draw);
+        }
+
+        resizeCanvas();
+        initParticles();
+        if (!reduceMotion) requestAnimationFrame(draw);
+        window.addEventListener('resize', () => { resizeCanvas(); initParticles(); });
+
+        // pause animation when tab is hidden to save resources
+        document.addEventListener('visibilitychange', () => {
+          if (!document.hidden && !reduceMotion) requestAnimationFrame(draw);
+        });
+      })();
     </script>
   </body>
 </html>
