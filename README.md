@@ -1,117 +1,75 @@
-# Milad Kianzadeh – Professional Portfolio
-
-Welcome to my personal portfolio website showcasing my background in IT infrastructure, DevOps, and full-stack software development.
-
-## 🌐 Live Website
-
-View my live site here:
-
-🔗 [https://miladkianzadeh.github.io/About-me/](https://miladkianzadeh.github.io/About-me/)
+Here is a clean, modern, and highly scannable `README.md` tailored specifically for your GitHub portfolio repository. It highlights your technical stack, your transition into cybersecurity, and your solid foundation in systems and network administration.
 
 ---
 
-## 👨‍💻 About Me
+# Systems & Network Infrastructure Professional
 
-* 🎓 **Education**:
-* **Master of Engineering in Electrical & Computer Engineering**, University of Ottawa (2023–2025)
-* **Bachelor of Engineering in Computer Engineering – Software**, Islamic Azad University (2011–2015)
+Welcome to my personal portfolio repository! This project hosts the source code for my interactive portfolio website, featuring a dynamic fiber-optic network theme that reflects my background in technical infrastructure, systems administration, and network operations.
 
+## 🚀 About Me
 
-* 💼 **Experience**: Over **8 years** in IT infrastructure, system administration, and software development across ISP, engineering, and financial sectors
-* 🧑‍🔧 **Roles**:
-* Help Desk Support – *Iranian Reinsurance Company*
-* IT Specialist – *Sarafraz* and *Sazehpad Engineering Firm*
-* Software Support & Full-Stack Developer – *Sabanet ISP*
+I am a logistically minded Systems and Network Infrastructure Professional with an **M.Eng in Electrical & Computer Engineering** from the University of Ottawa. I am currently leveraging my hands-on experience managing Windows Server environments, Active Directory domains, and enterprise routing networks to transition into the **Cybersecurity** space.
 
-
-* 📍 **Location**: Ottawa, Ontario, Canada
+* 📍 **Location:** Ottawa, Ontario, Canada
+* 💼 **Availability:** Open for full-time or hybrid opportunities immediately
+* 🎯 **Target Roles:** Systems & Network Administrator, Technical Support Engineer, Network Security Analyst, IT Specialist (L2/L3)
 
 ---
 
-## 🛠️ Technical Skills
+## 🛠️ Technical Skill Matrix
 
-### Networking & Infrastructure
-
-* Routing & Switching (Training)
-* LAN/WAN & wireless configuration, hybrid networks
-* Network security, monitoring, and optimization
-* Windows Server & Active Directory management
-
-### Systems Administration
-
-* VMware virtualization & infrastructure maintenance
-* Docker & Kubernetes containerization
-* RAID setup, diagnostics, and HP enterprise servers
-* CI/CD and automation workflows
-
-### Software Development
-
-* C#, ASP.NET WebForms, and ADO.NET (Full Stack)
-* SQL Server optimization and data management
-* Python programming for automation and data analysis
-* HTML, CSS, and JavaScript for front-end development
-
-### DevOps & Data Science
-
-* Git & GitHub workflow management
-* Docker Compose & container orchestration
-* Data analysis and machine learning with Python
-* Engineering data-driven and automated environments
+| Category | Technologies & Skills |
+| --- | --- |
+| **Networking & Infrastructure** | TCP/IP, DNS, DHCP, Subnetting, VLANs, LAN/WAN, Routing & Switching, MikroTik RouterOS, Network Monitoring |
+| **Systems Administration** | Windows Server (2012–2025), Active Directory, Group Policy (GPO), User Access & Account Management, HP Server Hardware, RAID Configuration, VMware |
+| **IT Support & Help Desk** | Advanced Troubleshooting, End-User Support, Incident Management, Technical Documentation, Hardware/Software Deployment |
+| **Security & Cyber** | Network Security Fundamentals, Firewall/ACL Configuration, Ethical Hacking Concepts (CEH) |
+| **DevOps & Cloud** | Git, GitHub, Docker, Docker Compose, Kubernetes, Cloud Computing Basics |
+| **Programming & Databases** | ASP.NET WebForms, ADO.NET, SQL & MS SQL Server, Python, C#, HTML5, CSS3 |
 
 ---
 
-## 🧩 Featured Projects
+## 🎓 Education & Key Training
 
-* ✅ **ISP Web Platform** – Designed and maintained large-scale internal apps using ASP.NET WebForms and ADO.NET at Sabanet
-* ✅ **Engineering IT Infrastructure** – Managed hybrid systems and network stability at Sazehpad Engineering Firm
-* ✅ **Enterprise Server Deployment** – Configured HP servers, RAID, and diagnostics at Sarafraz
-* ✅ **Financial Sector Support** – Delivered technical support and infrastructure reliability for Iranian Reinsurance Company
+### Academic Background
 
----
+* **M.Eng. in Electrical & Computer Engineering** | University of Ottawa (Graduated: 2025)
+* **B.Eng. in Computer Engineering (Software Major)** | Islamic Azad University
 
-## 📜 Coursework & Training
+### Featured Technical Credentials
 
-*Note: The following entries represent completed training programs.*
+I have completed over 34 professional courses and training paths to continuously expand my skills:
 
-* 🏅 **Networking** – CCNA & CCNP Routing & Switching (Training Completion)
-* 🏅 **Systems** – MCSA Windows Server 2012 & 2022 (Training Completion)
-* 🏅 **Networking** – CompTIA Network+ (Training Completion)
-* 🏅 **Security** – CEH (Certified Ethical Hacker) (Training Completion)
-* 🏅 **Programming** – CS50's Python (Harvard), SQL, .NET (Training Completion)
-* 🏅 **Cloud & DevOps** – Docker, Kubernetes, VMware, MikroTik (MTCNA) (Training Completion)
-* 🏅 **Linux** – Introduction to Linux (LinkedIn Learning)
-* 🏅 **Data & AI** – Machine Learning & AI Foundations (Coursera / Maktabkhooneh)
+* **Networking & Security:** Cisco CCNP Routing & Switching, Cisco CCNA, MikroTik MTCNA, CompTIA Network+ Training, CEH Ethical Hacking, Google Foundations of Cybersecurity
+* **Systems & Admin:** MCSA Windows Server, Windows Server 2022/2025 Active Directory & Group Policy Implementation (LinkedIn Learning)
+* **Development & Data:** CS50 Python (Harvard edX), .NET Foundation I & II, SQL Server Database Development
 
 ---
 
-## 📬 Contact Me
+## 📁 Key Practical Applications
 
-* 📧 **Email:** [mkian075@uottawa.ca](https://www.google.com/search?q=mailto%3Amkian075%40uottawa.ca)
-* 🌐 **LinkedIn:** [linkedin.com/in/miladkianzadeh](https://linkedin.com/in/miladkianzadeh)
-* 📍 **Location:** Ottawa, ON, Canada
+### 🔹 Enterprise Directory Services & GPO Hardening
+
+* Managed Active Directory domain trees, user credentials, and security groups to enforce access control.
+* Designed and deployed structured Group Policy Objects (GPOs) using Windows Server workflows to implement corporate desktop lockdowns.
+* Configured local networking baselines including secure DNS zones and automated DHCP address pool scopes.
+
+### 🔹 Multi-Vendor LAN/WAN Infrastructure Auditing
+
+* Built, segmented, and troubleshooted robust routing protocols and local area network architectures.
+* Implemented VLAN segmentation and secure broadcast domain isolation lines across managed enterprise access switches.
+* Performed systematic network monitoring and baseline troubleshooting on Cisco systems and MikroTik RouterOS.
+
+### 🔹 Secure Application Engineering & Database Validation
+
+* Developed secure transactional backend connectivity logic utilizing ASP.NET WebForms and ADO.NET abstraction layers.
+* Constructed and optimized complex relational data queries within MS SQL Server to address information systems anomalies.
+* Maintained source control versioning, tracking repository trees, and codebase patch states using Git.
 
 ---
 
-## 🚀 Availability
+## 📬 Connect With Me
 
-* Open to **full-time** and hybrid opportunities in 2026
-* Available for **consulting or freelance** IT and DevOps projects
-* Interested in infrastructure automation, software development, and data-driven solutions
-
----
-
-## 💻 Website Tech Stack
-
-* **Frontend:** HTML5, CSS3
-* **Hosting:** GitHub Pages
-
----
-
-## 📁 Project Structure
-
-Your repository includes:
-
-* `index.html` – Main portfolio content
-* `style.css` – Custom responsive design and animations
-* `assets/` – Profile image and media
-* `README.md` – Portfolio description and metadata
+* **LinkedIn:** [linkedin.com/in/miladkianzadeh](https://linkedin.com/in/miladkianzadeh)
+* **Academic Email:** [mkian075@uottawa.ca](https://www.google.com/search?q=mailto%3Amkian075%40uottawa.ca)
+* **Professional Email:** [MiladKianzadeh@cmail.carleton.ca](https://www.google.com/search?q=mailto%3AMiladKianzadeh%40cmail.carleton.ca)
