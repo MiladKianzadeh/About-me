@@ -1,7 +1,3 @@
-Here is a clean, modern, and highly scannable `README.md` tailored specifically for your GitHub portfolio repository. It highlights your technical stack, your transition into cybersecurity, and your solid foundation in systems and network administration.
-
----
-
 # Systems & Network Infrastructure Professional
 
 Welcome to my personal portfolio repository! This project hosts the source code for my interactive portfolio website, featuring a dynamic fiber-optic network theme that reflects my background in technical infrastructure, systems administration, and network operations.
