@@ -617,7 +617,7 @@ section {
 
 .skill-level.intermediate {
   background: rgba(232, 168, 56, 0.12);
-  color: #a96f10;
+  color: #b57d1a;
 }
 
 .skill-level.basic {
@@ -626,8 +626,8 @@ section {
 }
 
 .skill-level.knowledge {
-  background: rgba(148, 163, 184, 0.15);
-  color: #64748b;
+  background: rgba(107, 114, 128, 0.12);
+  color: #6b7280;
 }
 
 @media (max-width: 768px) {
